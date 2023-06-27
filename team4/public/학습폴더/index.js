@@ -1,4 +1,4 @@
-let map = [0,0,0,0,0,0,0,0,0]
+let map = [0,0,0,0,0,0,0,0,0] 
 
 ViewUpdate() 
 function userClick(num){
@@ -105,23 +105,22 @@ function outPutResult(resultNumber){
 /* HTML restartBox DIV박스 내 게임필드 버튼 생성 */
 function ViewUpdate()
 {
-	let _str = ""
-	let dStr = ""
+	let _str = " "
+	let dStr = " "
 
 	for(let i=0; i<9; i++)
 	{
 		if(map[i] == 1) {_str = "O"}
 		else if(map[i] == -1) {_str = "X"}
-		else{_str ="#"}
+		else{_str =""}
 		
 		 dStr+=
-		`<button onclick="userClick(${i})">${_str}</button>`
+		`<button onclick="userClick(${i})">${_str} </button>`
 		if((i+1)%3==0) dStr += '<br/>'
 	}
 
 	document.querySelector(".restartBox").innerHTML = dStr
 
-	
 }
 
 
