@@ -1,6 +1,6 @@
 let map = [0,0,0,0,0,0,0,0,0]
 
-ViewUpdate()
+ViewUpdate() 
 function userClick(num){
 	if( map[num] != 0 ){
 		return ;
@@ -8,21 +8,39 @@ function userClick(num){
 	
 	map[num] = 1
 	ViewUpdate()
-	if(outPutResult(WinChecker())){return}
+	let isEnd = false
+	if(outPutResult(WinChecker())){isEnd = true}
+	if(!isEnd)
+	{
+		computerClick()
 	
-	computerClick()
+		ViewUpdate()
+	
+		if(!isEnd&&outPutResult(WinChecker())){isEnd = true}
+	}
+	
+	if(isEnd)
+	{
+		RestartGame()
+		
+	}
+}
+function RestartGame()
+{
+	map = [0,0,0,0,0,0,0,0,0]
 	ViewUpdate()
-	if(outPutResult(WinChecker())){return}
 }
 function computerClick() {
 	
 	for(let i=1; i>0; i++){
+		
 		let 컴퓨터랜덤난수 = parseInt(Math.random()*8); //랜덤함수 생성
 		if( map[컴퓨터랜덤난수] ==0 ){
 			map[컴퓨터랜덤난수] =-1
 			i=-1
 		}		
 	}
+	
 	console.log(map)	
 }
 let winIdxList = [
@@ -73,7 +91,8 @@ function outPutResult(resultNumber){
 		alert("패배하였습니다")
 		return true
 		}
-	if(resultNumber == 3){
+	if(resultNumber == 3)
+	{
 		alert("무승부입니다")
 		return true
 		}
@@ -88,6 +107,7 @@ function ViewUpdate()
 {
 	let _str = ""
 	let dStr = ""
+
 	for(let i=0; i<9; i++)
 	{
 		if(map[i] == 1) {_str = "O"}
@@ -98,7 +118,10 @@ function ViewUpdate()
 		`<button onclick="userClick(${i})">${_str}</button>`
 		if((i+1)%3==0) dStr += '<br/>'
 	}
+
 	document.querySelector(".restartBox").innerHTML = dStr
+
+	
 }
 
 
