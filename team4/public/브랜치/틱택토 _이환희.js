@@ -1,4 +1,4 @@
-function outPutResult(){
+function outPutResult(resultNumber){
 
 	if(resultNumber == 1){
 		alert("승리하였습니다")
