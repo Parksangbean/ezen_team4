@@ -17,6 +17,7 @@ function WinChecker()
 	{
 		return 3 //무승부
 	}
+	
 	for(let i=0;i<24;i+=3)
 	{
 		let sum = 0
