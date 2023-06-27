@@ -1,81 +1,126 @@
-/*
+let map = [0,0,0,0,0,0,0,0,0] 
 
-
-주제: 틱택토 요구사항/작업순도 작성하기
-조건:
-		1.틱택토.html, 틱택토.css, 틱택토.js
-		2.객체{}사용x 배열사용o
-		2.사람 = o 컴퓨터= x[난수]
-		3.결과 나오면 재시작
-		
-1.요구사항 작성하기 -팀과제2
-2.작업 순서 작성하기
-
- 
-let 배열1 [0, 0, 0 ]  
-let 배열2 [1 -1 0] 
-let 배열3 [1 0 0]
-let 배열4 [8*3]
-컴퓨터 = -1 사람 =1
-let map =[0,0,0,0,0,0,0,0,0]
-(이기는 경우의수) =3개의 합을 비교하여 승자 결정
-
-사람 클릭    1  --- 한승우   클릭 idx = 1
-
-컴퓨터 클릭 2  --- 박상빈   클릭 idx =-1 클릭(유효성 검사),난수,html 뷰 처리
-
-
-한줄 비교    3  --- 김영태   3or-3 비교후 승리 비교
-
-출력,무승부 4  --- 이환희   3함수의 반환값으로 컴퓨터,사용자의 승,패,무승부 출력
-1 사용자
-2 컴퓨터
-3 무승부
-
-자판클릭함수 생성 
-	if{승리} 결과창 출력함수로 이동
-	if{무승부} 결과창 출력함수로 이동
-	if{패배} 결과창 출력함수로 이동
-	클릭하고 무승부 확인
-	자판 위 출력함수로 이동
-	
-자판 위 출력함수 생성
-	사용자 'o' 출력
-	컴퓨터 'x' 출력
-
-결과창 출력함수 생성
-	if 승리 - alert창으로 결과출력
-	else if 패배 - alert창으로 결과출력
-	else 무승부 - alert창으로 결과출력
-
-초기화함수 생성
-	'다시시작하기' 버튼을 클릭했을 때 게임 재시작
-
-
-answer[] = 123/456/789/147/258/369/159/753 idx
-	   
-
-for( i=0; i <24; i+=3)
-sum = 0
-	for(j=i;j<i+3;j++)
-	{
-		sum+=filed[answer[j]]
+ViewUpdate() 
+function userClick(num){
+	if( map[num] != 0 ){
+		return ;
 	}
-	if sum ==3 ?
+	
+	map[num] = 1
+	ViewUpdate()
+	let isEnd = false
+	if(outPutResult(WinChecker())){isEnd = true}
+	if(!isEnd)
+	{
+		computerClick()
+	
+		ViewUpdate()
+	
+		if(!isEnd&&outPutResult(WinChecker())){isEnd = true}
+	}
+	
+	if(isEnd)
+	{
+		RestartGame()
+		
+	}
 }
-*/
-let map =[0,0,0,0,0,0,0,0,0]
-
-function computer_click() {
+function RestartGame()
+{
+	map = [0,0,0,0,0,0,0,0,0]
+	ViewUpdate()
+}
+function computerClick() {
 	
 	for(let i=1; i>0; i++){
+		
 		let 컴퓨터랜덤난수 = parseInt(Math.random()*8); //랜덤함수 생성
 		if( map[컴퓨터랜덤난수] ==0 ){
 			map[컴퓨터랜덤난수] =-1
 			i=-1
 		}		
 	}
+	
 	console.log(map)	
+}
+let winIdxList = [
+	1,2,3,
+	4,5,6,
+	7,8,9,
+	7,5,3,
+	1,5,9,1,4,7,2,5,8,3,6,9
+]
+
+function WinChecker()
+{
+	
+	for(let i=0;i<24;i+=3)
+	{
+		
+		let sum = 0
+		for(let j=i;j<i+3;j++)
+		{
+			sum += map[ winIdxList[j]-1 ]
+		}
+		//console.log(sum)
+		if(sum == 3)
+		{
+			//console.log("사용자 승")
+			return 1    //사용자 승
+		}
+		else if(sum == -3)
+		{
+			//console.log("컴승")
+			return 2    //컴퓨터 승
+		}
+	}
+	if(map.indexOf(0) == -1)
+	{return 3} //무승부
+}
+
+
+function outPutResult(resultNumber){
+/* 매개변수가 1:승리 2:패배 3:무승부 */
+/* 게임결과를 alert창에 출력 */
+	if(resultNumber == 1){
+		alert("승리하였습니다")
+		
+		return true
+	}
+	if(resultNumber == 2){
+		alert("패배하였습니다")
+		return true
+		}
+	if(resultNumber == 3)
+	{
+		alert("무승부입니다")
+		return true
+		}
+		
+		
+	return false
+}
+
+
+/* HTML restartBox DIV박스 내 게임필드 버튼 생성 */
+function ViewUpdate()
+{
+	let _str = " "
+	let dStr = " "
+
+	for(let i=0; i<9; i++)
+	{
+		if(map[i] == 1) {_str = "O"}
+		else if(map[i] == -1) {_str = "X"}
+		else{_str =""}
+		
+		 dStr+=
+		`<button onclick="userClick(${i})">${_str} </button>`
+		if((i+1)%3==0) dStr += '<br/>'
+	}
+
+	document.querySelector(".restartBox").innerHTML = dStr
+
 }
 
 
