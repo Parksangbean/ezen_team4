@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body{
+	background-color: black;
+}
+
+.mainBox{
+	width: 800px;
+	height: 300px;
+	margin: 0 auto;
+	margin-top : 50px;
+	color: red;
+	font-size: 80px;
+	text-align: center;
+}
+
+.restartBox{
+
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+	margin-top : 10px;
+	background-color: black;
+
+}
+.restartBox button{
+	width: 265px;
+	height: 265px;
+	font-size: 100px;
+	background-color: white;
+}
