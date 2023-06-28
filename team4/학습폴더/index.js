@@ -92,7 +92,7 @@ function ViewUpdate()
 	{
 		if(map[i] == 1) {_str = "O"}
 		else if(map[i] == -1) {_str = "X"}
-		else{_str ="#"}
+		else{_str =" "}
 		
 		 dStr+=
 		`<button onclick="userClick(${i})">${_str}</button>`
