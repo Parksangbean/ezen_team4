@@ -1,4 +1,7 @@
 @charset "UTF-8";
+*{margin:  0px 0px;
+padding: 0px 0px;}
+
 
 body{
 	background-color: black;
@@ -21,6 +24,8 @@ body{
 	margin: 0 auto;
 	margin-top : 10px;
 	background-color: black;
+	display: flex;
+    flex-wrap: wrap;
 
 }
 .restartBox button{
