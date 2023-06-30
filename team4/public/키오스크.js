@@ -26,10 +26,6 @@ admin // 관리자 계정
  accountArray.push(addminAccount)
 
 
- function test()
- {
-	 console.log(accountArray)
- }
  
  function SignUp(){ console.log('버튼')		//회원가입 함수
    //let Name = document.querySelector('#Name').value;    // 성명
