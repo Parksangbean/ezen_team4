@@ -104,7 +104,6 @@ function PriceSelect(_idx)
 
 	//누적시간 더하기
 	accountArray[accountIndex].totalPrice += priceArray[_idx].price
-	//누적투입금액 더하기
 
 
 		
