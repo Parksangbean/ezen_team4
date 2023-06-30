@@ -1,0 +1,65 @@
+####Class#####
+AccountInfo // 유저정보
+   id
+   pwd
+   limitTime
+   grade
+   totalPrice
+-----------------------------
+PriceArray  // 요금충전
+         (시간)
+   1 : 1000   
+   2 : 2000
+   3 : 3000
+   4r : 4000
+
+------------------------------
+
+if(getUser.grade == n)
+   for
+      PriceArray.[i] * n(by user grade)
+   ~
+
+admin // 관리자 계정
+   id
+   pwd
+------------------------------------------
+
+
+--------------------------------------------
+
+####Array#####
+   accountArray //회원리스트
+      giftCard // 문화상품권
+
+----------------------------------------------
+
+
+####Function#####
+-----------------------------------
+PriceSelector - PriceCharge // 요금선택
+   Card // 카드
+   Cash // 현금
+----------------------------------------
+
+SignUp  //가입
+Login //로그인
+AdminLogin //관리자 로그인
+   - SignUp 
+   - FixUserInfo
+   - InitUserPwd
+   - DeleteAccount
+----------------------------------------
+
+SelectGiftCard //상품권
+
+-----------------------------------------
+ViewUpdater // 프론트 html 업데이트
+   Admin View
+   SignUp
+   Login
+   LoadPriceArray
+
+
+
+
