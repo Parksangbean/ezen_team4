@@ -29,27 +29,33 @@ AccountInfo // 유저정보
    grade//등급
    totalPrice//누적투입금액
 
+function PriceSlect(_getIdx)
+{
+	console.log(_getIdx)
+}
 
-function correctInfo(idx){
+function correctInfo(_idx){
 	
-	accountArray[idx].limitTime += priceArray[idx].time
-	accountArray[idx].totalPrice += priceArray[idx].price
+	accountArray[_idx].limitTime += priceArray[idx].time
+	//누적시간 더하기
+	accountArray[_idx].totalPrice += priceArray[idx].price
+	//누적투입금액 더하기
 	
-	if(accountArray[idx].totalPrice >= 300){
+	if(accountArray[_idx].totalPrice >= 300){
 		// totalPrice(누적투입금액)이 300시간 이상일 때 1 등급 부여
-		accountArray[idx].grade = 1
+		accountArray[_idx].grade = 1
 	} 
-	else if(accountArray[idx].totalPrice >= 200){
+	else if(accountArray[_idx].totalPrice >= 200){
 		// totalPrice(누적투입금액)이 200시간 이상일 때 2 등급 부여
-		accountArray[idx].grade = 2
+		accountArray[_idx].grade = 2
 	}
-	else if(accountArray[idx].totalPrice >= 100){
+	else if(accountArray[_idx].totalPrice >= 100){
 		// totalPrice(누적투입금액)이 200시간 이상일 때 3 등급 부여
-		 accountArray[idx].grade = 3
+		 accountArray[_idx].grade = 3
 	}
-	else if(accountArray[idx].totalPrice < 100 && accountArray[idx].totalPrice >= 0){
+	else if(accountArray[_idx].totalPrice < 100 && accountArray[_idx].totalPrice >= 0){
 		// totalPrice(누적투입금액)이 100시간 미만일 때 4 등급 부여
-		accountArray[idx].grade = 4
+		accountArray[_idx].grade = 4
 	}
 		
 }
