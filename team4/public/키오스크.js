@@ -115,6 +115,7 @@ function correctInfo(_idx){
 		document.querySelector('.pwd').value = ``
 		
 		LoadPriceList();
+		Admin_View();
 
 }
 //테스트용 유저 정보 추가
@@ -145,6 +146,56 @@ priceArray.push({time:"08:00",price:8000})
 	`
 	}
 }
+
+function  Admin_View(){ console.log('관리자페이지')
+   let UserList = document.querySelector('#UserList')
+   let html = `<tr> <th>아이디</th> <th>비밀번호</th> <th>등급</th> <th>충전금액</th> </tr>`
+   //UserList.innerHTML = html
+   for( let i=0; i<accountArray.length; i++){
+   let account = accountArray[i];
+      html += `<tr onclick="AdminViewTable(${i})">
+               <td> ${ account.ID } </td>
+               <td> ${ account.Pwd } </td>
+               <td> ${ account.grade } </td>
+               <td> ${ account.totalPrice } </td>
+             </tr>`
+   }
+   
+   UserList.innerHTML  = html
+}
+
+
+
+
+
+function AdminViewTable(index){
+	let AdminView_Table = document.querySelector('#AdminViewTable')
+	// 2. 무엇을 ~~~ 
+	//let accountArray = accountArray[index] // 인수로 전달받은 인덱스의 객체를 1개 꺼내기 
+	
+	let html = `<div> 회원 상세 조회 </div>
+				<div> 이름 : ${ accountArray[index].Name } </div>
+				<div> 아이디 : ${ accountArray[index].ID } </div>
+				<div> 비밀번호 : ${ accountArray[index].Pwd } </div>
+				<div> 등급 : ${ accountArray[index].grade } </div>
+				<button onclick="onDelete( ${ index } )">삭제</button>
+				<button>수정</button>`
+	// 3. 대입
+	AdminView_Table.innerHTML = html  
+	 
+}
+
+
+
+
+
+function onDelete( index ){ console.log('onDelete()함수' + index )
+	
+	// 1. 배열내 삭제할 인덱스의 해당하는 객체 호출 
+	 accountArray.splice(index,1)
+	 Admin_View()
+}
+
 
 
  
