@@ -18,7 +18,7 @@ admin // 관리자 계정
  let priceArray = [] //요금리스트
  let giftCardArray = [] //상품권 리스트
  
- 
+
  function SignUp(){ console.log('버튼')		//회원가입 함수
    let Name = document.querySelector('#Name').value;    // 성명
    let ID = document.querySelector('#ID').value;      // 아이디   
@@ -114,6 +114,7 @@ function correctInfo(_idx){
 		document.querySelector('.pwd').value = ``
 		
 		LoadPriceList();
+		Admin_View();
 
 }
 //테스트용 유저 정보 추가
@@ -143,6 +144,22 @@ priceArray.push({time:"08:00",price:8000})
 				</div>
 	`
 	}
+}
+// 관리자 회원정보 목록 페이지
+function  Admin_View(){ console.log('관리자페이지')
+	let UserList = document.querySelector('#UserList')
+	let html = `<tr> <th>아이디</th> <th>비밀번호</th> <th>등급</th> <th>충전금액</th> </tr>`
+	//UserList.innerHTML = html
+	for( let i=0; i<accountArray.length; i++){
+	let account = accountArray[i];
+		html += `<tr>
+					<td> ${ account.ID } </td>
+					<td> ${ account.Pwd } </td>
+					<td> ${ account.grade } </td>
+					<td> ${ account.totalPrice } </td>
+				 </tr>`
+	}
+	UserList.innerHTML  = html
 }
 
 
