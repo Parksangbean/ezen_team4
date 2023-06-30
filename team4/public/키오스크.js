@@ -32,7 +32,7 @@ admin // 관리자 계정
  }
  
  function SignUp(){ console.log('버튼')		//회원가입 함수
-   let Name = document.querySelector('#Name').value;    // 성명
+   //let Name = document.querySelector('#Name').value;    // 성명
    let ID = document.querySelector('#ID').value;      // 아이디   
    let Pwd = document.querySelector('#Pwd').value;       // 비밀번호
    
@@ -44,12 +44,12 @@ admin // 관리자 계정
    }
    
    
-   let account = { Name : Name ,
+   let account = { 
                ID : ID ,
                Pwd : Pwd ,
                limitTime :0,
 		   		grade:4,
-   			totalPrice:500000
+   			totalPrice:0
    }
    if( Name == '' || ID == '' || Pwd == '' ){
       alert('회원가입정보를 입력해주세요.')
@@ -76,7 +76,7 @@ function PriceSelect(_idx)
 	
 
 	
-	accountArray[accountIndex].limitTime += priceArray[_idx].time
+	accountArray[accountIndex].limitTime += Number(priceArray[_idx].time)
 
 	let _PriceSelect = prompt("결제방식 '카드' 또는 '현금'을 입력해주세요")
 	let _inputCashPrice = 0
@@ -104,7 +104,7 @@ function PriceSelect(_idx)
 	console.log(accountArray[accountIndex].limitTime)
 	console.log('출력')
 
-	accountArray[accountIndex].limitTime += priceArray[_idx].time
+	//accountArray[accountIndex].limitTime += priceArray[_idx].time
 
 	//누적시간 더하기
 	accountArray[accountIndex].totalPrice += priceArray[_idx].price
@@ -147,7 +147,7 @@ function PriceSelect(_idx)
 	 let  id =document.querySelector('.id').value;	console.log(id)
 	 let pwd =document.querySelector('.pwd').value; console.log(pwd)
 	 
-	 let member ={ id : id, pwd : pwd};	console.log(member)
+
 	 
 	 if(id==''|| pwd==""){alert('[로그인 실패]: 아이디,패스워드 확인해주세요.'); return;}
 	if(id.length<8 || pwd.length<8){alert('[로그인 실패]: 8글자 이상 일벽해주세요'); return;}
@@ -157,9 +157,9 @@ function PriceSelect(_idx)
 	 	let login = false; //로그인 상태 저장 변수
 		for ( let i=0; i<accountArray.length ; i++){
 
-			let member = accountArray[i]
-			if(member.ID==id){ 
-				if(member.Pwd==pwd) { 
+			//let member = accountArray[i]
+			if( accountArray[i].ID==id){ 
+				if( accountArray[i].Pwd==pwd) { 
 						login= true; 
 						accountIndex = i
 						break;
@@ -246,14 +246,13 @@ function AdminViewTable(index){
 	let AdminView_Table = document.querySelector('#AdminViewTable')
 	// 2. 무엇을 ~~~ 
 	//let accountArray = accountArray[index] // 인수로 전달받은 인덱스의 객체를 1개 꺼내기 
-	
+	//<div> 이름 : ${ accountArray[index].Name } </div>
 	let html = `<div> 회원 상세 조회 </div>
-				<div> 이름 : ${ accountArray[index].Name } </div>
+				
 				<div> 아이디 : ${ accountArray[index].ID } </div>
 				<div> 비밀번호 : ${ accountArray[index].Pwd } </div>
 				<div> 등급 : ${ accountArray[index].grade } </div>
-				<button onclick="onDelete( ${ index } )">삭제</button>
-				<button>수정</button>`
+				<button onclick="onDelete( ${ index } )">삭제</button>`
 	// 3. 대입
 	AdminView_Table.innerHTML = html  
 	 
@@ -271,12 +270,6 @@ function onDelete( index ){ console.log('onDelete()함수' + index )
 
 
 
-	if(accountArray[accountIndex].id == addminAccount.id && accountArray[accountIndex].pwd == addminAccount.pwd)
-	{
-		document.querySelector(".AdminNomarlUser").innerHTML = _adminBtn
-	}
-	else
-	{
 		document.querySelector(".AdminNomarlUser").innerHTML =`
 		<div class="MenuInfoItem">
 				<div> 아이디 : ${accountArray[accountIndex].ID} </div>
@@ -284,7 +277,7 @@ function onDelete( index ){ console.log('onDelete()함수' + index )
 				<div> 등급 : ${accountArray[accountIndex].grade} </div>
 			</div>
 		</div>`
-	}
+	
 }
 
 
