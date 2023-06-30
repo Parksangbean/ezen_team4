@@ -19,7 +19,7 @@ admin // 관리자 계정
  let giftCardArray = [] //상품권 리스트
  
  
- function SignUp(){ console.log('버튼')
+ function SignUp(){ console.log('버튼')		//회원가입 함수
    let Name = document.querySelector('#Name').value;    // 성명
    let ID = document.querySelector('#ID').value;      // 아이디   
    let Pwd = document.querySelector('#Pwd').value;       // 비밀번호
@@ -83,13 +83,13 @@ function correctInfo(_idx){
  
 
  
- function Login(){
+ function Login(){		//로그인 함수
 	 let  id =document.querySelector('.id').value;	console.log(id)
 	 let pwd =document.querySelector('.pwd').value; console.log(pwd)
 	 
 	 let member ={ id : id, pwd : pwd};	console.log(member)
 	 
-	 if(id==''|| pwd==""){alert('[로그인 실패]: 8글자 입력해주세요.'); return;}
+	 if(id==''|| pwd==""){alert('[로그인 실패]: 아이디,패스워드 확인해주세요.'); return;}
 	if(id.length<8 || pwd.length<8){alert('[로그인 실패]: 8글자 이상 일벽해주세요'); return;}
 	
 	 //accountArray.push(member)
@@ -116,9 +116,6 @@ function correctInfo(_idx){
 		LoadPriceList();
 
 }
-
- 
-
 //테스트용 유저 정보 추가
 
 // 요금제 리스트 직접 기입
