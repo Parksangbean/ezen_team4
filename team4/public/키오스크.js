@@ -38,7 +38,10 @@ admin // 관리자 계정
    
    let account = { Name : Name ,
                ID : ID ,
-               Pwd : Pwd 
+               Pwd : Pwd ,
+               limitTime :0,
+		   		grade:0,
+   			totalPrice:0
    }
    if( Name == '' || ID == '' || Pwd == '' ){
       alert('회원가입정보를 입력해주세요.')
@@ -68,6 +71,7 @@ admin // 관리자 계정
 			if(member.ID==id){ 
 				if(member.Pwd==pwd) { 
 						login= true; 
+						accountIndex = i
 						break;
 								
 				}				
@@ -78,7 +82,41 @@ admin // 관리자 계정
 		
 		document.querySelector('.id').value = ``
 		document.querySelector('.pwd').value = ``
+		
+		LoadPriceList();
+
 }
 
  
+
+//테스트용 유저 정보 추가
+
+// 요금제 리스트 직접 기입
+priceArray.push({time:"01:00",price:1000})
+priceArray.push({time:"02:00",price:2000})
+priceArray.push({time:"03:00",price:3000})
+priceArray.push({time:"04:00",price:4000})
+priceArray.push({time:"05:00",price:5000})
+priceArray.push({time:"06:00",price:6000})
+priceArray.push({time:"07:00",price:7000})
+priceArray.push({time:"08:00",price:8000})
+
+
+ function LoadPriceList()
+{
+	let _getListView = document.querySelector(".MainPriceListView") // 요금리스트를 추가할 div select 
+	for(let idx=0;idx<priceArray.length;idx++)
+	{
+		//리스트에 목록 업데이트
+		_getListView.innerHTML +=`
+		<div class="PriceListItem" onclick="PriceSelect(${idx})">
+				<h4>${accountArray[accountIndex].grade} 등급회원 ${priceArray[idx].price}원</h4>
+				<span> ${priceArray[idx].time}</span>
+				
+				</div>
+	`
+	}
+	}
+
+
  
