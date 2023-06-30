@@ -17,8 +17,8 @@ admin // 관리자 계정
  let accountArray = [] // 회원정보 리스트
  let priceArray = [] //요금리스트
  let giftCardArray = [] //상품권 리스트
- 
- 
+ let addminAccount = {ID:"root1234",Pwd:"root1234",limitTime:34873249646237,grade:1,totalPrice:99999999}
+ accountArray.push(addminAccount)
  function SignUp(){ console.log('버튼')
    let Name = document.querySelector('#Name').value;    // 성명
    let ID = document.querySelector('#ID').value;      // 아이디   
@@ -36,7 +36,7 @@ admin // 관리자 계정
                ID : ID ,
                Pwd : Pwd ,
                limitTime :0,
-		   		grade:0,
+		   		grade:4,
    			totalPrice:0
    }
    if( Name == '' || ID == '' || Pwd == '' ){
@@ -56,31 +56,54 @@ function PriceSelect(_getIdx)
 
 function correctInfo(_idx){
 	
+	
 	accountArray[_idx].limitTime += priceArray[idx].time
 	//누적시간 더하기
 	accountArray[_idx].totalPrice += priceArray[idx].price
 	//누적투입금액 더하기
 	
-	if(accountArray[_idx].totalPrice >= 300){
+
+		
+}
+//유저 정보의 등급 조정
+ function SetGrade()
+ {
+	 if(accountArray[_idx].totalPrice >= 30000){
 		// totalPrice(누적투입금액)이 300시간 이상일 때 1 등급 부여
 		accountArray[_idx].grade = 1
 	} 
-	else if(accountArray[_idx].totalPrice >= 200){
+	else if(accountArray[_idx].totalPrice >= 20000){
 		// totalPrice(누적투입금액)이 200시간 이상일 때 2 등급 부여
 		accountArray[_idx].grade = 2
 	}
-	else if(accountArray[_idx].totalPrice >= 100){
+	else if(accountArray[_idx].totalPrice >= 10000){
 		// totalPrice(누적투입금액)이 200시간 이상일 때 3 등급 부여
 		 accountArray[_idx].grade = 3
 	}
-	else if(accountArray[_idx].totalPrice < 100 && accountArray[_idx].totalPrice >= 0){
-		// totalPrice(누적투입금액)이 100시간 미만일 때 4 등급 부여
-		accountArray[_idx].grade = 4
+	else 
+		{
+			// totalPrice(누적투입금액)이 100시간 미만일 때 4 등급 부여
+			accountArray[_idx].grade = 4	
 	}
-		
-}
+ }
  
- 
+ //등급을 받아 요금제 리스트에서 배율 조정
+ function GradetoPrice(_getgr,_getPrice)
+ {
+	
+	 if(_getgr == 1)
+	 {
+		 
+		  return 0.7 *_getPrice
+	 }
+	 if(_getgr == 2){
+		return 0.8 *_getPrice 
+	 } 
+	 if(_getgr == 3) {
+		 return 0.9 *_getPrice}
+	 if(_getgr== 4) {
+		 return 1 *_getPrice}
+ }
 
  
  function Login(){
@@ -114,12 +137,9 @@ function correctInfo(_idx){
 		document.querySelector('.pwd').value = ``
 		
 		LoadPriceList();
+		AdminAccountCheck();
 
 }
-
- 
-
-//테스트용 유저 정보 추가
 
 // 요금제 리스트 직접 기입
 priceArray.push({time:"01:00",price:1000})
@@ -138,15 +158,35 @@ priceArray.push({time:"08:00",price:8000})
 	for(let idx=0;idx<priceArray.length;idx++)
 	{
 		//리스트에 목록 업데이트
+
 		_getListView.innerHTML +=`
 		<div class="PriceListItem" onclick="PriceSelect(${idx})">
-				<h4>${accountArray[accountIndex].grade} 등급회원 ${priceArray[idx].price}원</h4>
+				<h4>${accountArray[accountIndex].grade} 등급회원 ${GradetoPrice(accountArray[accountIndex].grade,priceArray[idx].price)}원</h4>
 				<span> ${priceArray[idx].time}</span>
+				
 				
 				</div>
 	`
 	}
 }
+function AdminAccountCheck()
+{
+	let _adminBtn = `<button onclick="AdminMenu"> 관리자 메뉴</button>`
 
+	if(accountArray[accountIndex].id == addminAccount.id && accountArray[accountIndex].pwd == addminAccount.pwd)
+	{
+		document.querySelector(".AdminNomarlUser").innerHTML = _adminBtn
+	}
+	else
+	{
+		document.querySelector(".AdminNomarlUser").innerHTML =`
+		<div class="MenuInfoItem">
+				<div> 아이디 : ${accountArray[accountIndex].ID} </div>
+				<div> 남은시간 : ${accountArray[accountIndex].limitTime}  </div>
+				<div> 등급 : ${accountArray[accountIndex].grade} </div>
+			</div>
+		</div>`
+	}
+}
 
  
