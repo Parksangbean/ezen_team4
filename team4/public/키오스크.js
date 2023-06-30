@@ -32,6 +32,7 @@ admin // 관리자 계정
    }
    
    
+   
    let account = { Name : Name ,
                ID : ID ,
                Pwd : Pwd ,
