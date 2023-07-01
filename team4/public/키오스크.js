@@ -14,8 +14,8 @@ admin // 관리자 계정
    
    
  */
-	document.querySelector('#main').style='display: none;'
-	document.querySelector('#Admin').style='display: none;'
+document.querySelector('#main').style='display: none;'
+document.querySelector('#Admin').style='display: none;'
  let accountIndex; //로그인된 유저의 index 저장
  let accountArray = [] // 회원정보 리스트
  let priceArray = [] //요금리스트
@@ -24,7 +24,11 @@ admin // 관리자 계정
 // 관리자 계정
  let addminAccount = {ID:"root1234",Pwd:"root1234",limitTime:34873249646237,grade:1,totalPrice:99999999}
  accountArray.push(addminAccount)
- 
+ //테스트 유저 
+ accountArray.push({Name:"가나다",ID:"test1test2",Pwd:"test2test2",limitTime:54,grade:4,totalPrice:1000})
+ accountArray.push({Name:"라마바",ID:"test2test2",Pwd:"test2test2",limitTime:114,grade:4,totalPrice:2000})
+ accountArray.push({Name:"사아자",ID:"test1test2",Pwd:"test2test2",limitTime:123,grade:4,totalPrice:3000})
+ accountArray.push({Name:"자차카",ID:"test1test2",Pwd:"test2test2",limitTime:154,grade:4,totalPrice:3000})
  function SignUp(){ //회원가입 함수
    let Name = document.querySelector('#Name').value;    // 성명
    let ID = document.querySelector('#ID').value;      // 아이디   
@@ -105,7 +109,10 @@ function PriceSelect(_idx)
 	//누적시간 더하기
 	accountArray[accountIndex].totalPrice += priceArray[_idx].price
 	//누적투입금액 더하기
-
+	SetGrade()
+	UserInfoUpdate()
+	LoadPriceList()
+	
 	console.log('회원번호 : '+accountIndex)
 	console.log('누적시간 : '+accountArray[accountIndex].limitTime)
 	console.log('누적금액 : '+accountArray[accountIndex].totalPrice)
@@ -174,21 +181,28 @@ function Login(){		//로그인 함수
 	LoadPriceList();
 	AdminAccountCheck();
 	
-	document.querySelector(".outputConsumerInfo").innerHTML = 
-	`<h3>회원정보</h3>
-	이름 : ${accountArray[accountIndex].Name}<br/>
-	아이디 : ${accountArray[accountIndex].ID}<br/>
-	남은시간 : ${accountArray[accountIndex].limitTime}<br/>
-	누적충전시간 : ${accountArray[accountIndex].totalPrice}<br/>
-	등급 : ${accountArray[accountIndex].grade}
-	`
+	UserInfoUpdate()
+	
 	
 	document.querySelector('#Account').style='display: none;'
+	
 	document.querySelector('#main').style
 	='width : 1180px;height: 580px;border: 1px solid black;display: flex;justify-content: space-between;margin: 0 auto;background-color: #4F4B50;'
 }
 
-
+function UserInfoUpdate()
+{
+	let h = parseInt(accountArray[accountIndex].limitTime/60)
+	let m = accountArray[accountIndex].limitTime%60
+		document.querySelector(".outputConsumerInfo").innerHTML = 
+	`<h3>회원정보</h3>
+	이름 : ${accountArray[accountIndex].Name}<br/>
+	아이디 : ${accountArray[accountIndex].ID}<br/>
+	남은시간 : ${h}시간${m}분<br/>
+	누적충전시간 : ${accountArray[accountIndex].totalPrice}<br/>
+	등급 : ${accountArray[accountIndex].grade}
+	`
+}
 // 요금제 리스트 직접 기입
 priceArray.push({time:60,price:1000})
 priceArray.push({time:120,price:2000})
@@ -203,24 +217,26 @@ priceArray.push({time:480,price:8000})
 {
 	let _getListLeftView = document.querySelector(".MainPriceListView_left") // 요금리스트를 추가할 div select 
 	let _getListRightView = document.querySelector(".MainPriceListView_right") // 요금리스트를 추가할 div select
-
+	let _leftview
 	for(let idx=0;idx<4;idx++)
 	{
-		_getListLeftView.innerHTML +=`
+		_leftview +=`
 		<div class="PriceListItem" onclick="PriceSelect(${idx})">
 				<h4>${accountArray[accountIndex].grade} 등급회원 ${GradetoPrice(accountArray[accountIndex].grade,priceArray[idx].price)}원</h4>
 				<span> ${priceArray[idx].time}분</span>
 				</div>	`
 	}
+	_getListLeftView.innerHTML = _leftview
+	let _rightview
 	for(let idx=4;idx<priceArray.length;idx++)
 	{
-		_getListRightView.innerHTML +=`
+		_rightview+=`
 		<div class="PriceListItem" onclick="PriceSelect(${idx})">
 				<h4>${accountArray[accountIndex].grade} 등급회원 ${GradetoPrice(accountArray[accountIndex].grade,priceArray[idx].price)}원</h4>
 				<span> ${priceArray[idx].time}분</span>
 				</div>	`
 	}
-	
+	_getListRightView.innerHTML =_rightview
 }
 
 // 로그아웃시 함수
@@ -305,7 +321,9 @@ function onDelete( index ){ console.log('onDelete()함수' + index )
 	// 1. 배열내 삭제할 인덱스의 해당하는 객체 호출
 	 accountArray.splice(index,1)
 	 Admin_View()
-
+	document.querySelector('#AdminViewTable').innerHTML =``
+	
+	/*
 	if(accountArray[accountIndex].id == addminAccount.ID && accountArray[accountIndex].Pwd == addminAccount.Pwd)
 	{
 		document.querySelector(".AdminNomarlUser").innerHTML = _adminBtn
@@ -319,7 +337,7 @@ function onDelete( index ){ console.log('onDelete()함수' + index )
 				<div> 등급 : ${accountArray[accountIndex].grade} </div>
 			</div>
 		</div>`
-	}
+	}*/
 }
 
 
