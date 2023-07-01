@@ -211,23 +211,22 @@ priceArray.push({time:240,price:4000})
 priceArray.push({time:300,price:5000})
 priceArray.push({time:360,price:6000})
 priceArray.push({time:420,price:7000})
-priceArray.push({time:480,price:8000})
+priceArray.push({time:143,price:8000}) // 분 테스트
 
  function LoadPriceList()
 {
 	let _getListLeftView = document.querySelector(".MainPriceListView_left") // 요금리스트를 추가할 div select 
 	let _getListRightView = document.querySelector(".MainPriceListView_right") // 요금리스트를 추가할 div select
-	let _leftview
+	let _leftview =``
 	for(let idx=0;idx<4;idx++)
 	{
-		_leftview +=`
-		<div class="PriceListItem" onclick="PriceSelect(${idx})">
+		_leftview +=`<div class="PriceListItem" onclick="PriceSelect(${idx})">
 				<h4>${accountArray[accountIndex].grade} 등급회원 ${GradetoPrice(accountArray[accountIndex].grade,priceArray[idx].price)}원</h4>
 				<span> ${priceArray[idx].time}분</span>
 				</div>	`
 	}
 	_getListLeftView.innerHTML = _leftview
-	let _rightview
+	let _rightview =``
 	for(let idx=4;idx<priceArray.length;idx++)
 	{
 		_rightview+=`
