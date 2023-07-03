@@ -54,33 +54,6 @@ function PriceSelect(_getIdx)
 }
 
 
-function correctInfo(_idx){
-	
-	accountArray[_idx].limitTime += priceArray[idx].time
-	//누적시간 더하기
-	accountArray[_idx].totalPrice += priceArray[idx].price
-	//누적투입금액 더하기
-	
-	if(accountArray[_idx].totalPrice >= 300){
-		// totalPrice(누적투입금액)이 300시간 이상일 때 1 등급 부여
-		accountArray[_idx].grade = 1
-	} 
-	else if(accountArray[_idx].totalPrice >= 200){
-		// totalPrice(누적투입금액)이 200시간 이상일 때 2 등급 부여
-		accountArray[_idx].grade = 2
-	}
-	else if(accountArray[_idx].totalPrice >= 100){
-		// totalPrice(누적투입금액)이 200시간 이상일 때 3 등급 부여
-		 accountArray[_idx].grade = 3
-	}
-	else if(accountArray[_idx].totalPrice < 100 && accountArray[_idx].totalPrice >= 0){
-		// totalPrice(누적투입금액)이 100시간 미만일 때 4 등급 부여
-		accountArray[_idx].grade = 4
-	}
-		
-}
- 
- 
 
  
  function Login(){		//로그인 함수
@@ -117,76 +90,6 @@ function correctInfo(_idx){
 		Admin_View();
 
 }
-//테스트용 유저 정보 추가
-
-// 요금제 리스트 직접 기입
-priceArray.push({time:"01:00",price:1000})
-priceArray.push({time:"02:00",price:2000})
-priceArray.push({time:"03:00",price:3000})
-priceArray.push({time:"04:00",price:4000})
-priceArray.push({time:"05:00",price:5000})
-priceArray.push({time:"06:00",price:6000})
-priceArray.push({time:"07:00",price:7000})
-priceArray.push({time:"08:00",price:8000})
-
-
- function LoadPriceList()
-{
-	let _getListView = document.querySelector(".MainPriceListView") // 요금리스트를 추가할 div select 
-	for(let idx=0;idx<priceArray.length;idx++)
-	{
-		//리스트에 목록 업데이트
-		_getListView.innerHTML +=`
-		<div class="PriceListItem" onclick="PriceSelect(${idx})">
-				<h4>${accountArray[accountIndex].grade} 등급회원 ${priceArray[idx].price}원</h4>
-				<span> ${priceArray[idx].time}</span>
-				
-				</div>
-	`
-	}
-}
-
-function  Admin_View(){ console.log('관리자페이지')
-   let UserList = document.querySelector('#UserList')
-   let html = `<tr> <th>아이디</th> <th>비밀번호</th> <th>등급</th> <th>충전금액</th> </tr>`
-   //UserList.innerHTML = html
-   for( let i=0; i<accountArray.length; i++){
-   let account = accountArray[i];
-      html += `<tr onclick="AdminViewTable(${i})">
-               <td> ${ account.ID } </td>
-               <td> ${ account.Pwd } </td>
-               <td> ${ account.grade } </td>
-               <td> ${ account.totalPrice } </td>
-             </tr>`
-   }
-   
-   UserList.innerHTML  = html
-}
-
-
-
-
-
-function AdminViewTable(index){
-	let AdminView_Table = document.querySelector('#AdminViewTable')
-	// 2. 무엇을 ~~~ 
-	//let accountArray = accountArray[index] // 인수로 전달받은 인덱스의 객체를 1개 꺼내기 
-	
-	let html = `<div> 회원 상세 조회 </div>
-				<div> 이름 : ${ accountArray[index].Name } </div>
-				<div> 아이디 : ${ accountArray[index].ID } </div>
-				<div> 비밀번호 : ${ accountArray[index].Pwd } </div>
-				<div> 등급 : ${ accountArray[index].grade } </div>
-				<button onclick="onDelete( ${ index } )">삭제</button>
-				<button>수정</button>`
-	// 3. 대입
-	AdminView_Table.innerHTML = html  
-	 
-}
-
-
-
-
 
 function onDelete( index ){ console.log('onDelete()함수' + index )
 	
