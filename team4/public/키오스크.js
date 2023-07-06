@@ -86,12 +86,6 @@ function SignUpGap(){
 // 결제방식(카드, 현금)을 선택
 function PriceSelect(_idx)
 {
-<<<<<<< HEAD
-	console.log(_getIdx)
-}
-
-
-=======
 
 	let _PriceSelect = prompt("결제방식 '카드' 또는 '현금'을 입력해주세요")
 	let _inputCashPrice = 0
@@ -125,7 +119,6 @@ function PriceSelect(_idx)
 	console.log('누적금액 : '+accountArray[accountIndex].totalPrice)
 		
 }
->>>>>>> branch 'main' of https://github.com/Parksangbean/ezen_team4
 
 //유저 정보의 등급 조정
  function SetGrade()
@@ -186,11 +179,6 @@ function Login(){		//로그인 함수
 	document.querySelector('.id').value = ``
 	document.querySelector('.pwd').value = ``
 		
-<<<<<<< HEAD
-		LoadPriceList();
-		Admin_View();
-
-=======
 	LoadPriceList();
 	AdminAccountCheck();
 	
@@ -249,11 +237,8 @@ priceArray.push({time:143,price:8000}) // 분 테스트
 				</div>	`
 	}
 	_getListRightView.innerHTML =_rightview
->>>>>>> branch 'main' of https://github.com/Parksangbean/ezen_team4
 }
 
-<<<<<<< HEAD
-=======
 // 로그아웃시 함수
 function logout(){
 	accountIndex = ''
@@ -331,7 +316,6 @@ function AdminViewTable(index){
 	 
 }
 
->>>>>>> branch 'main' of https://github.com/Parksangbean/ezen_team4
 function onDelete( index ){ console.log('onDelete()함수' + index )
 	
 	// 1. 배열내 삭제할 인덱스의 해당하는 객체 호출
@@ -367,7 +351,6 @@ function changePagegrade(){
 	document.querySelector('#main').style=
 	'width : 1180px; height: 580px;border: 1px solid black;display: flex;justify-content: space-between;margin: 0 auto;background-color: #4F4B50;'
 }
-
 
 
 
