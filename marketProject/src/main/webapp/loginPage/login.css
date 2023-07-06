@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+/* 로고 */
+#wrap{
+	width: 1200px;
+	height: 1000px;
+	border: 1px solid blue;
+	margin: 0 auto;
+}
+.img_logo{
+	width: 280px;
+	height: 90px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+.img_logo img{
+	width: 270px;
+	height: 80px;
+
+}
+
+/* 로그인 */
+#login_box{
+	width: 600px;
+	height: 400px;
+	margin: 0 auto;
+	border: 1px solid white;
+	background-color: #FE8A3F;
+}
+.manager_ID_box{
+	width: 320px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+.manager_PWD_box{
+	width: 320px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+.manager_ID{
+	width: 300px;
+	height: 30px;
+	padding-left: 10px;
+	border-radius: 30px;
+}
+.manager_PWD{
+	width: 300px;
+	height: 30px;
+	padding-left: 10px;
+	border-radius: 30px;
+}
+
+
+.manager_button_box{
+	width: 250px;
+	height: 35px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+#login_box button{
+	width: 110px;
+	height: 30px;
+	display: block;
+	margin: 0 auto;
+	background-color: green;
+	color: white;
+	font-size: 15px;
+	border-radius: 30px;
+	font-weight: bold;
+	border-color: white
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
