@@ -1,6 +1,6 @@
-let map = [0,0,0,0,0,0,0,0,0] 
+let map = [0,0,0,0,0,0,0,0,0]
 
-ViewUpdate() 
+ViewUpdate()
 function userClick(num){
 	if( map[num] != 0 ){
 		return ;
@@ -8,39 +8,21 @@ function userClick(num){
 	
 	map[num] = 1
 	ViewUpdate()
-	let isEnd = false
-	if(outPutResult(WinChecker())){isEnd = true}
-	if(!isEnd)
-	{
-		computerClick()
+	if(outPutResult(WinChecker())){return}
 	
-		ViewUpdate()
-	
-		if(!isEnd&&outPutResult(WinChecker())){isEnd = true}
-	}
-	
-	if(isEnd)
-	{
-		RestartGame()
-		
-	}
-}
-function RestartGame()
-{
-	map = [0,0,0,0,0,0,0,0,0]
+	computerClick()
 	ViewUpdate()
+	if(outPutResult(WinChecker())){return}
 }
 function computerClick() {
 	
 	for(let i=1; i>0; i++){
-		
 		let 컴퓨터랜덤난수 = parseInt(Math.random()*8); //랜덤함수 생성
 		if( map[컴퓨터랜덤난수] ==0 ){
 			map[컴퓨터랜덤난수] =-1
 			i=-1
 		}		
 	}
-	
 	console.log(map)	
 }
 let winIdxList = [
@@ -91,8 +73,7 @@ function outPutResult(resultNumber){
 		alert("패배하였습니다")
 		return true
 		}
-	if(resultNumber == 3)
-	{
+	if(resultNumber == 3){
 		alert("무승부입니다")
 		return true
 		}
@@ -105,22 +86,19 @@ function outPutResult(resultNumber){
 /* HTML restartBox DIV박스 내 게임필드 버튼 생성 */
 function ViewUpdate()
 {
-	let _str = " "
-	let dStr = " "
-
+	let _str = ""
+	let dStr = ""
 	for(let i=0; i<9; i++)
 	{
 		if(map[i] == 1) {_str = "O"}
 		else if(map[i] == -1) {_str = "X"}
-		else{_str =""}
+		else{_str =" "}
 		
 		 dStr+=
-		`<button onclick="userClick(${i})">${_str} </button>`
+		`<button onclick="userClick(${i})">${_str}</button>`
 		if((i+1)%3==0) dStr += '<br/>'
 	}
-
 	document.querySelector(".restartBox").innerHTML = dStr
-
 }
 
 
