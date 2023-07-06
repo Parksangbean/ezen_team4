@@ -16,44 +16,75 @@ a{ color: black; text-decoration: none; } /* a태그의 색상 , 밑줄 제거	 
 }
 /* 헤드 메뉴 */
 #wrap{
-	width: 1400px;
+	width: 1200px;
 }
-#head_menu{
-	display: flex; /* 하위요소 가로배치 */
-	justify-content: space-around; /* 가로배치 */
-	
-	
+#head_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* 원하는 여백 크기로 조정 */
 }
-#head_menu img{
-	width: 140px;
-	height: 60px;	
+
+#head_menu img {
+  width: 140px;
+  height: 50px; /* 로고 이미지의 높이를 원하는 크기로 조정 */
+  margin-left: 195px;
+}
+
+#head_menu ul {
+  display: flex;
+  gap: 10px; /* 메뉴 간격을 원하는 크기로 조정 */
+  list-style: none;
+  margin-right: 62px;
+}
+
+#head_menu ul li {
+  padding: 3px 0px 10px 20px;
+  font-size: 16px;
+}
+
+#head_menu ul li a {
+  text-decoration: none;
+  color: black;
 }
 .head_name{
-	color: orange;
-}
-#head_menu ul{
-	display: flex;
-	justify-content: space-around;
-	margin: -70px;
-	padding: 10px;
-	font-size: 18px;
-}
-#head_menu li{
-	margin: 60px;
-	padding: 10px 0px 0px 40px;
-}
-.input_box{
-	border: none;
+	color: #FF6A00;
 }
 .main_top{
-	width: 150%;
+	width: 142%;
 	background-color: #FBF7F2;
-	height: 650px;	
+	height: 650px;
+	position: relative;	
 }
 .main_title{
 	padding: 20px;
 }
-.top_img{
-	width: 570px;
-	margin-left: 850px;
+.top_img {
+    position: absolute;
+    right: -84px;
+    bottom: 0;
+    width: 812px;
+    height: 646px;
+    background-color: #FBF7F2;
+    background-repeat: no-repeat;
+    background-size: 804px 685px;
+    padding-top: 7px;
+    margin-left: 30px; 
 }
+ .head_search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;    
+            border-radius: 5px;
+        }
+.head_search input[type="search"] {
+          	width: 300px;
+            height: 40px;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            background-color: #eeeeee;
+}
+ 
