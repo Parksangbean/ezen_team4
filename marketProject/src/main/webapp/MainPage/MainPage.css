@@ -23,12 +23,14 @@ a{ color: black; text-decoration: none; } /* a태그의 색상 , 밑줄 제거	 
   justify-content: space-between;
   align-items: center;
   padding: 10px; /* 원하는 여백 크기로 조정 */
+  text-align: center;
 }
 
 #head_menu img {
   width: 140px;
   height: 50px; /* 로고 이미지의 높이를 원하는 크기로 조정 */
   margin-left: 195px;
+   object-fit : cover; 
 }
 
 #head_menu ul {
@@ -40,7 +42,7 @@ a{ color: black; text-decoration: none; } /* a태그의 색상 , 밑줄 제거	 
 
 #head_menu ul li {
   padding: 3px 0px 10px 20px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #head_menu ul li a {
@@ -51,18 +53,15 @@ a{ color: black; text-decoration: none; } /* a태그의 색상 , 밑줄 제거	 
 	color: #FF6A00;
 }
 .main_top{
-	width: 142%;
+	width: 180%;
 	background-color: #FBF7F2;
 	height: 650px;
 	position: relative;	
 }
-.main_title{
-	padding: 20px;
-}
 .top_img {
     position: absolute;
-    right: -84px;
-    bottom: 0;
+    right: 470px;
+    bottom: 0px;
     width: 812px;
     height: 646px;
     background-color: #FBF7F2;
@@ -72,19 +71,70 @@ a{ color: black; text-decoration: none; } /* a태그의 색상 , 밑줄 제거	 
     margin-left: 30px; 
 }
  .head_search {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 60px;    
-            border-radius: 5px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;    
+    border-radius: 5px;
         }
 .head_search input[type="search"] {
-          	width: 300px;
-            height: 40px;
-            padding: 5px;
-            font-size: 16px;
-            border: none;
-            outline: none;
-            background-color: #eeeeee;
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #eeeeee;
 }
- 
+.main_title{
+	padding: 180px 0px 0px 409px;
+	font-size: 50px;
+}
+.main_top p{
+	padding: 25px 0px 0px 411px;
+}
+ .second_text{
+ 	width: 160%;
+ 	height: 650px;
+ 	background: white;
+ }
+ .second_img{
+    width: 510px;
+    margin: 40px 0px 0px 134px;
+ }
+ .second_text h1{
+ 	font-size: 50px;
+ 	padding: 230px 0px 0px 1100px;
+ }
+ .second_text p{
+ 	padding : 20px 0px 0px 1100px;
+ }
+.home_button{
+	background-color: #F1F3F5;
+    color: #212529;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 1.45rem 2.6rem;
+	margin: 34px 0px 0px 1100px;
+    display: inline-block;
+}
+.home_button2{
+	background-color: #F1F3F5;
+    color: #212529;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 1.45rem 2.6rem;
+    display: inline-block;
+    margin-left: 20px;
+}
+.second_text2{
+	padding-top: 400px;
+	margin:  -1128px 0px 0px -283px;
+}
+.third_text{
+	width: 170%;
+	background-color: #FBF7F2;
+	height: 450px;
+}

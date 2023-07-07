@@ -22,14 +22,73 @@
 						<input  type="search" placeholder="물품이나 동네를 검색하세요.">	
 					</form><!-- 물품검색하는 인풋 박스 끝-->
 			</div>	<!-- 헤더 구역 end -->
+			
 			<div class="main_top"> <!-- 본뭇 첫번째 시작 -->
 				<h1 class="main_title" >당신 근처의<br/> 당근마켓</h1>	
 				<p>
 		          중고 거래부터 동네 정보까지, 이웃과 함께해요<br/>
 		          가깝고 따뜻한 당신의 근처를 만들어요.
-		          <img  class="top_img"src="../MainPage/img/탑페이지.webp">	     
+		          <img  class="top_img"src="../MainPage/img/timg2.png">	     
          	 	</p>		
-			</div>	<!-- 본뭇 첫번째 end -->
+			</div>				<!-- 본뭇 첫번째 end -->
+			
+			<div class="second_text">				<!-- 본뭇 두번째 시작 -->	
+			
+				<img  class="second_img"src="../MainPage/img/timg5.png">
+				<div class="second_text2">	   
+					<h1>우리 동네<br/>
+					중고 직거래 마켓</h1>
+					<p>동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.</p>		
+					<a href="#" class="home_button">인기매물보기</a>
+					<a href="#" class="home_button2">믿을 수 있는 중고거래</a>
+				</div>
+			</div>				<!-- 본뭇 두번째 end -->
+				
+			
+			<div class="third_text">				<!-- 본뭇 세번째 시작 -->
+				
+			
+			
+			
+			</div>				<!-- 본뭇 세번째 end -->
+			
+			
+			
+			
+			
+			<div class="fourth_text">				<!-- 본뭇 네번째 시작 -->
+			
+			
+			
+			
+			
+			
+			</div>				<!-- 본뭇 네번째 end -->
+			
+			
+			
+			
+			<div class="five_text">				<!-- 본뭇 다섯번째 시작 -->
+			
+			
+			
+			
+			
+			
+			
+			</div>				<!-- 본뭇 다섯번째 end -->
+			
+			
+			
+			
+			<div class="lower_category">				<!-- 하단 카테고리 시작  -->
+			
+			
+			
+			
+			</div>				<!-- 하단 카테고리 end  -->
+			
 		</div>		<!--전체구역 end  -->
+		<script src="../MainPage/MainPage.js" type="text/javascript"></script>
 </body>
 </html>
