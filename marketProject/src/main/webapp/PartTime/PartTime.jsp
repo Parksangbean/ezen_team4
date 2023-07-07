@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="./PartTime.css">
 </head>
-<body>
+<body class="test">
 	<div class="toparea">
 		<div class="topcomment1">
 			<h1>우리 동네에서 찾는 <br/>
@@ -22,12 +22,10 @@
 		</div>
 	</div>
 	<div class="wrapList">
-	
-		 
-	  
+
 		<div class="partTimeArea">
 			<h2 class="listTitle">인기 당근알바</h2>
-			<div class="listArea"></div>
+			<!-- <div class="listArea"></div> -->
 		</div>
 		
 	</div>
