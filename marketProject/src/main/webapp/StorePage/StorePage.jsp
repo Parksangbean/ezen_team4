@@ -17,19 +17,26 @@
 		</div>
 		<div><h3>다양한 동네가게를 볼 수 있어요</h3></div>
 		<div class="category_menu">
-			<button onclick="AllContent()">전체</button>
-			<button onclick="()">식당</button>
-			<button onclick="Cafe()">카페</button>
-			<button onclick="Move()">용달/이사</button>
-			<button onclick="()">뷰티/미용</button>
-			<button onclick="health()">헬스/필라테스/요가</button>
+			<button onclick="AllContentView()">전체</button>
+			<button onclick="restaurantView()">식당</button>
+			<button onclick="CafeView()">카페</button>
+			<button onclick="MoveView()">용달/이사</button>
+			<button onclick="beautyView()">뷰티/미용</button>
+			<button onclick="healthView()">헬스/필라테스/요가</button>
 		</div>
-		<div class="content">
-			<button>가게 등록</button>
+		<div class="contentBox">
+			<div class="content">
+				<div>가게1</div>
+				<div>가게2</div>
+				<div>가게3</div>
+				<div>가게3</div>
+				<div>가게3</div>
+			</div>
+			<button onclick="regist()"class="sum" type="button">가게 등록</button>
 		</div>
 		<div><h3>동네 이웃이 남긴 후기를 찾아보세요</h3></div>
 		<div class="review">
-			<button>후기 등록</button>
+			<button class="review_btn" type="button">후기 등록</button>
 		</div> 
 	</div> <!-- main end -->
 	<div class="footer">

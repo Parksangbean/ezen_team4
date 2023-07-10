@@ -25,10 +25,18 @@ li{ list-style: none;}
 .category_menu button{
 	margin: 10px;
 }
-.content{
+.contentBox{
+	display: flex;
+	justify-content: center;
 	border: 1px solid red;
 	width: 1200px;
 	height: 800px;
+}
+.content{
+	display:flex;
+	justify-content:space-between;
+	width:500px; height:800px;
+	border: 1px solid red;
 }
 .review{
 	border: 1px solid red;
