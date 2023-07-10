@@ -10,8 +10,10 @@
 <body>
 	<div class="body"><!-- main start -->
 		<div class="top_logo">
-			<h3>동네 이웃들이<br/>자주 가는 동네 가게</h3> <br/>
-			<p>우리 동네 사람들이<br/>이용하는 가게를 찾아보세요.</p>
+			<div class="text">
+				<h3>동네 이웃들이<br/>자주 가는 동네 가게</h3> <br/>
+				<p>우리 동네 사람들이<br/>이용하는 가게를 찾아보세요.</p>
+			</div>
 		</div>
 		<div><h3>다양한 동네가게를 볼 수 있어요</h3></div>
 		<div class="category_menu">

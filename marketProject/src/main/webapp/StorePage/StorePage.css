@@ -12,13 +12,9 @@ li{ list-style: none;}
 	border : 1px solid red;
 	background-image: url("./img/toplogo.png");
 	background-repeat: no-repeat;
-	background-position: 60%; 
+	background-position: 50%; 
 	background-size: contain;
 	background-color: #F7F1EB;
-}
-.top_logo h3{
-	
-	text-align: center;
 }
 .category_menu{
 	width:1200px;
