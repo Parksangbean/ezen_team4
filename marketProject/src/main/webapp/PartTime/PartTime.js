@@ -103,7 +103,7 @@
 	 }
  )*/
   let listItem = [] // 알바 리스트
-  
+  const unitlist = ['시급','일급','월급','연봉']
  let rand = Math.random()*80+10 //리스트 갯수 랜덤 생성
 for(let i = 0 ; i<rand;i++)
   listItem.push(
@@ -111,7 +111,7 @@ for(let i = 0 ; i<rand;i++)
 		 imgPath:"./img/nonimg.jpg",
 		 title:"롤 브론즈~챌린저 대리 구함",
 		 address:"현주소 브론즈",
-		 payUnit:"시급",
+		 payUnit: unitlist[Math.floor(Math.random()*unitlist.length)],
 		 pay:Math.random()*900000+10
 		 
 	 }
