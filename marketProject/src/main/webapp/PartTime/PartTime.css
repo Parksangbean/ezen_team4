@@ -5,9 +5,6 @@ a{  text-decoration-line: none;
 	color:inherit;
 }
 
-.finished-animation {
-  animation-fill-mode: forwards;
-}
 .toparea
 {
 	height: 300px;
