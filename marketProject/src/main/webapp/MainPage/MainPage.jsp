@@ -10,7 +10,7 @@
 <body>
 		<div id="wrap">		<!--전체구역  -->
 			<div id="head_menu">	<!-- 헤더 구역 -->
-				<a href="#"><img src="../MainPage/img/당근마켓로고.jpg"></a> <!-- 헤더 당근마켓 로고 이미지 -->
+				<a href="#"><img class="head_img" src="../MainPage/img/당근마켓로고.png"></a> <!-- 헤더 당근마켓 로고 이미지 -->
 				<ul> <!-- 헤더 카테고리 시작 -->
 					<li><a href="#"><span class="head_name">중고거래</span></a></li>
 					 <li><a href="#">동네가게</a></li> 
@@ -46,9 +46,20 @@
 				
 			
 			<div class="third_text">				<!-- 본뭇 세번째 시작 -->
-				
-			
-			
+				<div class="text">
+					<h1>이웃과 함께 하는<br/>동네생활</h1>
+					<p>우리 동네의 다양한 이야기를 이웃과 함께 나누어요.</p>
+				</div>
+				<div class="icon-stroy"></div>
+					<div class="text_1">
+						<p>우리동네질문</p>
+						<p class="text_1p">궁금한 게 있을 땐 이<br/>웃에게 물어보세요.</p>
+				<div class="icon-stroy2"></div>
+					<div class="text_2">
+						<p>동네분실센터</p>
+						<p class="text_2p">궁금한 게 있을 땐 이<br/>웃에게 물어보세요.</p>
+					</div>
+					</div>	
 			
 			</div>				<!-- 본뭇 세번째 end -->
 			
