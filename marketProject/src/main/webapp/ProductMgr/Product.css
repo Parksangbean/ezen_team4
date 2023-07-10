@@ -1,0 +1,57 @@
+@charset "UTF-8";
+.toptitle
+{
+	margin:  0 auto;
+	width: 300px;
+}
+
+.mgrWrap
+{
+	width: 1200px;
+	height: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+.selbtn
+{
+	margin-top: 300px;
+	width: 150px;
+	height: 100px;
+	text-align: center;
+	margin-right: 30px;
+}
+.inputWrap
+{
+	margin-top: 200px;
+}
+.dropunit
+{
+	width: 80px;
+	height: 40px;
+	margin-right: 20px;
+}
+.payarea
+{
+	display: flex;
+	justify-content: center;
+}
+.infoarea
+{
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;
+	width: 1200px;
+	height: 200px;
+	align-items:center;
+	justify-content: space-evenly;
+	
+	
+}
+.infoarea input
+{
+	width: 320px;
+	height: 40px;
+	
+	font-size: 12px;
+	
+}
