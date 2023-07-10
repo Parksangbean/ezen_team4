@@ -22,8 +22,26 @@ document.querySelector('#Admin').style='display: none;'
  let priceArray = [] //요금리스트
  let giftCardArray = [] //상품권 리스트
 
+<<<<<<< HEAD
 // 관리자 계정
  let addminAccount = {ID:"root1234",Pwd:"root1234",limitTime:34873249646237,grade:1,totalPrice:99999999}
+=======
+// 관리자 계정
+ let addminAccount = {ID:"root1234",Pwd:"root1234",limitTime:34873249646237,grade:1,totalPrice:99999999}
+<<<<<<< HEAD
+ accountArray.push(addminAccount)
+
+
+ function test()
+ {
+	 console.log(accountArray)
+ }
+ 
+
+ function SignUp(){ console.log('버튼')		//회원가입 함수
+   //let Name = document.querySelector('#Name').value;    // 성명
+=======
+>>>>>>> branch '한승우' of https://github.com/Parksangbean/ezen_team4
  accountArray.push(addminAccount)
  //테스트 유저 
  accountArray.push({Name:"가나다",ID:"test1test2",Pwd:"test2test2",limitTime:54,grade:4,totalPrice:1000})
@@ -32,6 +50,7 @@ document.querySelector('#Admin').style='display: none;'
  accountArray.push({Name:"자차카",ID:"test1test2",Pwd:"test2test2",limitTime:154,grade:4,totalPrice:3000})
  function SignUp(){ //회원가입 함수
    let Name = document.querySelector('#Name').value;    // 성명
+>>>>>>> branch 'main' of https://github.com/Parksangbean/ezen_team4
    let ID = document.querySelector('#ID').value;      // 아이디   
    let Pwd = document.querySelector('#Pwd').value;       // 비밀번호
    
@@ -173,6 +192,15 @@ function Login(){		//로그인 함수
 		alert('로그인 실패');
 		document.querySelector('.id').value = ``
 		document.querySelector('.pwd').value = ``
+<<<<<<< HEAD
+		
+		LoadPriceList();
+		Admin_View();
+
+		LoadPriceList();
+		
+		AdminAccountCheck();
+=======
 		return;
 		}
 	SetGrade();
@@ -190,7 +218,21 @@ function Login(){		//로그인 함수
 	document.querySelector('#main').style
 	='width : 1180px;height: 580px;border: 1px solid black;display: flex;justify-content: space-between;margin: 0 auto;background-color: #4F4B50;'
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'main' of https://github.com/Parksangbean/ezen_team4
+
+<<<<<<< HEAD
+
+
+
+}
+//테스트용 유저 정보 추가
+
+
+=======
+>>>>>>> branch '한승우' of https://github.com/Parksangbean/ezen_team4
 function UserInfoUpdate()
 {
 	let h = parseInt(accountArray[accountIndex].limitTime/60)
@@ -204,6 +246,7 @@ function UserInfoUpdate()
 	등급 : ${accountArray[accountIndex].grade}
 	`
 }
+>>>>>>> branch 'main' of https://github.com/Parksangbean/ezen_team4
 // 요금제 리스트 직접 기입
 priceArray.push({time:60,price:1000})
 priceArray.push({time:120,price:2000})
@@ -236,6 +279,25 @@ priceArray.push({time:143,price:8000}) // 분 테스트
 				<span> ${priceArray[idx].time}분</span>
 				</div>	`
 	}
+<<<<<<< HEAD
+}
+// 관리자 회원정보 목록 페이지
+function  Admin_View(){ console.log('관리자페이지')
+	let UserList = document.querySelector('#UserList')
+	let html = `<tr> <th>아이디</th> <th>비밀번호</th> <th>등급</th> <th>충전금액</th> </tr>`
+	//UserList.innerHTML = html
+	for( let i=0; i<accountArray.length; i++){
+	let account = accountArray[i];
+		html += `<tr>
+					<td> ${ account.ID } </td>
+					<td> ${ account.Pwd } </td>
+					<td> ${ account.grade } </td>
+					<td> ${ account.totalPrice } </td>
+				 </tr>`
+	}
+	UserList.innerHTML  = html
+}
+=======
 	_getListRightView.innerHTML =_rightview
 }
 
@@ -262,6 +324,7 @@ function logout(){
 
 
 //관리자 계정으로 로그인할 때만 '관리자메뉴 버튼' 출력
+>>>>>>> branch 'main' of https://github.com/Parksangbean/ezen_team4
 function AdminAccountCheck()
 {
 	
@@ -337,6 +400,11 @@ function onDelete( index ){ console.log('onDelete()함수' + index )
 				<div> 등급 : ${accountArray[accountIndex].grade} </div>
 			</div>
 		</div>`
+<<<<<<< HEAD
+	
+}
+
+=======
 	}*/
 }
 
@@ -359,5 +427,6 @@ function changePagegrade(){
 
 
 
+>>>>>>> branch 'main' of https://github.com/Parksangbean/ezen_team4
 
 
