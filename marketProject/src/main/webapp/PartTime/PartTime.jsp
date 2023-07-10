@@ -7,7 +7,10 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="./PartTime.css">
 </head>
-<body class="test">
+<body >
+	<%@include file="../header/header.jsp" %>
+
+	
 	<div class="toparea">
 		<div class="topcomment1">
 			<h1>우리 동네에서 찾는 <br/>

@@ -11,9 +11,9 @@
 
 </head>
 <body>
-
+	<%@include file="../header/header.jsp" %>
 	<div id=wrap><!-- 전체 레이아웃 -->
-	
+		
 	
 		<div class="img_logo">
 			<img src="/marketProject/loginPage/img/당근마켓 로고.png">

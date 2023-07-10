@@ -9,20 +9,7 @@
 </head>
 <body>
 		<div id="wrap">		<!--전체구역  -->
-			<div id="head_menu">	<!-- 헤더 구역 -->
-				<a href="#"><img class="head_img" src="../MainPage/img/당근마켓로고.png"></a> <!-- 헤더 당근마켓 로고 이미지 -->
-				<ul> <!-- 헤더 카테고리 시작 -->
-					<li><a href="#"><span class="head_name">중고거래</span></a></li>
-					 <li><a href="#">동네가게</a></li> 
-					<li><a href="#">알바</a></li>
-					<li><a href="#">중고차직거래</a></li>
-					<li><a href="#">Join</a></li>			
-				</ul> <!-- 헤더 카테고리 끝 -->
-					<form class="head_search"> <!-- 물품검색하는 인풋 박스 -->
-						<input  type="search" placeholder="물품이나 동네를 검색하세요.">	
-					</form><!-- 물품검색하는 인풋 박스 끝-->
-			</div>	<!-- 헤더 구역 end -->
-			
+			<%@include file="../header/header.jsp" %>
 			<div class="main_top"> <!-- 본뭇 첫번째 시작 -->
 				<h1 class="main_title" >당신 근처의<br/> 당근마켓</h1>	
 				<p>

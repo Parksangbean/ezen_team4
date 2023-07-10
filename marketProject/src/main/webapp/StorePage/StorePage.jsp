@@ -8,6 +8,7 @@
 <link href="StorePage.css" rel="stylesheet">
 </head>
 <body>
+	<%@include file="../header/header.jsp" %>
 	<div class="body"><!-- main start -->
 		<div class="top_logo">
 			<div class="text">
