@@ -17,7 +17,7 @@
 		          가깝고 따뜻한 당신의 근처를 만들어요.
 		          <img  class="top_img"src="../MainPage/img/timg2.png">	     
          	 	</p>		
-			</div>				<!-- 본뭇 첫번째 end -->
+			</div>				
 			
 			<div class="second_text">				<!-- 본뭇 두번째 시작 -->	
 			
@@ -33,6 +33,7 @@
 				
 			
 			<div class="third_text">				<!-- 본뭇 세번째 시작 -->
+				
 				<div class="text">
 					<h1>이웃과 함께 하는<br/>동네생활</h1>
 					<p>우리 동네의 다양한 이야기를 이웃과 함께 나누어요.</p>
@@ -42,30 +43,32 @@
 						<p>우리동네질문</p>
 						<p class="text_1p">궁금한 게 있을 땐 이<br/>웃에게 물어보세요.</p>
 				<div class="icon-stroy2"></div>
-					<div class="text_2">
+					<div class="text_write">
 						<p>동네분실센터</p>
-						<p class="text_2p">궁금한 게 있을 땐 이<br/>웃에게 물어보세요.</p>
+						<p class="text_write_p">무언가를 잃어버렸을<br/>때, 함께 찾을 수 있어요.</p>
 					</div>
-					</div>	
-			
+				<div class="icon-stroy3"></div>
+					<div class="text_write1">
+						<p>동네모임</p>
+						<p class="text_write_1p">관심사가 비슷한 이웃과<br/>온오프라인으로 만나요.</p>
+					</div>
+					<img class="third_img"src="img/timg3.png">
+				</div>	
 			</div>				<!-- 본뭇 세번째 end -->
 			
-			
-			
-			
-			
-			<div class="fourth_text">				<!-- 본뭇 네번째 시작 -->
-			
-			
-			
-			
-			
-			
-			</div>				<!-- 본뭇 네번째 end -->
-			
-			
-			
-			
+	
+			<div class="fourth_text">
+				<div>
+					<h1 class="" >내 근처에서 찾는<br/> 동네가게</h1>	
+					<p>
+			          우리 동네 가게를 찾고 있나요?<br/>
+			          동네 주민이 남긴 진짜 후기를 함께 확인해보세요!
+			          <img  class="fourth_img"src="../MainPage/img/timg4.png">
+			          <br/>	
+			          <button class="gray_button" style="margin-top: 30px;">당근마켓 동네가게 찾기</button>     
+	         	 	</p>		      	 	
+				</div>	
+			</div>				<!-- 본뭇 네번째 end -->	
 			<div class="five_text">				<!-- 본뭇 다섯번째 시작 -->
 			
 			
