@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'MBC1961GulimM';
+}
+/* 로고 */
+#wrap{
+	width: 1200px;
+	height: 1500px;
+	border: 1px solid blue;
+	margin: 0 auto;
+}
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/* 이미지 삽입구역 */
+.img_logo{
+	width: 280px;
+	height: 90px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+.img_logo img{
+	width: 270px;
+	height: 80px;
+
+}
+
+
+/* 메인 회원가입 구역 */
+#main_Account_Field{
+	width: 1000px;
+	height: 656px;
+	border: 1px solid red;
+	margin: 0 auto;
+	background-color: #FE8A3F;
+	margin-top: 40px;
+}
+
+#main_Account_Field div{
+	font-size: 27px;
+	background-color: white;
+	border-radius: 30px;
+	padding-top: 16px;
+	padding-left: 30px;
+	margin-top: 65px;
+}
+
+.guide_InputBox{
+	padding-top: 7px;
+	margin-left: 20px;
+}
+
+
+
+#main_Account_Field input{
+	width: 300px;
+	height: 40px;
+}
+
+#name_Box{
+	width: 700px;
+	height: 60px;
+	border: 1px solid black;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+#id_Box{
+	width: 700px;
+	height: 60px;
+	border: 1px solid black;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+#pwd_Box{
+	width: 700px;
+	height: 60px;
+	border: 1px solid black;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+#pwd_Check_Box{
+	width: 700px;
+	height: 60px;
+	border: 1px solid black;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+#name_Box .name_Input_Text{
+	margin-right: 127px;
+}
+#pwd_Box .pwd_Input_Text{
+	margin-right: 127px;
+}
+
+
+#id_Box .id_CheckButton{
+	width: 80px;
+	height: 40px;
+	font-size: 15px;
+	margin-right: 40px;
+}
+
+#pwd_Check_Box .pwd_CheckButton{
+	width: 80px;
+	height: 40px;
+	font-size: 15px;
+	margin-right: 40px;
+}
+
+
+/* 메인 회원가입 버튼 구역 */
+#account_Button{
+	width: 300px;
+	height: 60px;
+	border: 1px solid black;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 35px;
+	padding-top: 20px;
+	border-radius: 30px;
+	margin-top: 300px;
+}
+/* 하단 회원가입 버튼에 마우스를 올렸을 때 */
+#account_Button:hover {
+      background-color: #54C270;
+ }
+
+/* 녹색 체크표시 이미지 크기 조절 */
+.img_checkBox{
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+}
+
+
+.point_pwd{
+	font-size: 17px;
+}
+ 
+ 
+ 
+ 
+ 
+ 

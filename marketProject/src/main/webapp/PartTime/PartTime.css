@@ -1,1 +1,143 @@
 @charset "UTF-8";
+
+*{padding: 0px 0px; margin: 0px 0px;}
+a{  text-decoration-line: none;
+	color:inherit;
+}
+
+.toparea
+{
+	height: 300px;
+	width: 100%;
+	background-color: #fff5f0;
+	position: relative;
+	margin-bottom: 100px;
+	
+	
+}
+.topcomment1
+{
+	position:absolute;
+	left: 30%;
+	top:20%;
+	
+}
+.topcomment2
+{
+	position:absolute;
+	left: 30%;
+	bottom:33%;
+	
+}
+.topimg
+{
+	width: 600px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
+
+.partTimeArea
+{
+	margin: 0 auto;
+	width: 900px;
+	height: 900px;
+	
+}
+.partTimeArea h2
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+}
+.previewImg
+{
+	width: 100px;
+	height: 100px;
+}
+.listArea
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.partTimeItem
+{
+	width:400px;
+	height: 150px;
+	display:flex;
+	margin: 10px 10px;
+	
+}
+.itemInformation
+{
+	padding-left: 30px;
+	list-style: none;
+	line-height: 25px;
+}
+.itemTitle
+{
+	font-size: 20px;
+	margin-bottom: 8px;
+}
+.itemAddress
+{
+	font-size: 15px;
+	opacity: 0.7;
+}
+.itemPay
+{
+	font-weight: 700;
+}
+.subBanner
+{
+	border-radius: 30px;
+	width: 100%;
+	height: 120px;
+	background-color: #E5F5FD;
+	position: relative;
+	display: flex;
+	flex-direction:column;
+	justify-content: space-evenly;
+	margin: 50px 0px;
+}
+
+.subBtn
+{
+	background-color: #FF6F0F;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	width: 150px;
+	height: 50px;
+	font-weight: 1000;
+}
+.subBtn:hover
+{
+	background-color: #fa6616;
+}
+.subarea
+{
+	width: 100%;
+	display: flex;
+	height: 50%;
+}
+.subBanner img
+{
+	width: 60px;height: 60px;
+	margin: 0 40px;
+
+}
+.subInfo
+{
+	font-size: 20px;
+	font-weight: 700;
+	width: 33%;
+	margin-right: 250px;
+}
+.wrapList
+{
+	width: 900px;
+	margin: 0 auto;
+}
+
