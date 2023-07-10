@@ -8,10 +8,13 @@
 <link rel="stylesheet" href="./PartTime.css">
 </head>
 <body >
-	<%@include file="../header/header.jsp" %>
+	
 
+	<%@include file="../header/header.jsp" %>
+	
 	
 	<div class="toparea">
+	
 		<div class="topcomment1">
 			<h1>우리 동네에서 찾는 <br/>
 			당근알바</h1>
