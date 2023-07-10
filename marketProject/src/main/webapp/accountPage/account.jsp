@@ -48,7 +48,7 @@
 		</div><!-- 회원가입 end-->
 
 
-		<div id="account_Button">회원가입</div>
+		<div onclick="compliteAccount()" id="account_Button">회원가입</div>
 	
 	</div><!-- 전체 레이아웃 end -->
 

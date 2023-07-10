@@ -1,13 +1,16 @@
-let accountMemberList = []	// 가입된 객체형태의 회원을 담는 배열(회원리스트)
+let accountMemberList = [{Mname : "manager",Mid : "manager",Mpwd : "manager"}]
+// 가입된 객체형태의 회원을 담는 배열(회원리스트)
+// + 관리자 계정생성
 
 let accountMember = {	// 개인별 회원정보 객체
-	Mnumber : "111",	// 회원순번
-	Mname : "111",	// 회원성명
-	Mid : "111",		// 회원아이디
-	Mpwd : "111"	// 회원비밀번호
+	Mname : "",	// 회원성명
+	Mid : "",	// 회원아이디
+	Mpwd : ""	// 회원비밀번호
 }
 
-accountMemberList.push(accountMember)
+// 쿠키에 올려져있는 값을 accountMemberList에 대입
+// 회원가입 페이지에 들어오면 accountMemberList는 초기화 되어있음
+accountMemberList = JSON.parse(localStorage.getItem('accountMemberList'))
 
 for(let i=0; i<accountMemberList.length; i++){
 	
@@ -41,20 +44,27 @@ let temporaryID = '' //유효성 합격된 아이디를 임시저장하기위한
 function id_DuplicationCheck(){
 	
 	let accountID = document.querySelector('.id_Input_Text').value
+	let id_existCheck = 0
 	
 	// 회원리스트를 모두 조회하여 이미 가입된 중복아이디가 있는지 확인
 	for(let i=0; i<accountMemberList.length; i++){
 		if(accountMemberList[i].Mid==accountID){
-			alert('이미 가입된 아이디입니다')
-			document.querySelector('.id_Input_Text').value = ''
-		} else {
-			alert('사용 가능한 아이디입니다.')
+			id_existCheck++
+		}
+	}
+	
+	if(id_existCheck!=0){
+		alert('이미 가입된 아이디입니다')
+		document.querySelector('.id_Input_Text').value = ''
+	}else{
+		alert('사용 가능한 아이디입니다.')
 			idCheck=true	//유효성 합격
 			add_id_point()	//녹색 체크표시
 			temporaryID = accountID	//임시 아이디 저장
-		}
-		
 	}
+	
+	
+	
 }
 
 // 유효성 검사가완료된 아이디가 변경되는 경우
@@ -96,7 +106,7 @@ function pwd_Check(){
 		document.querySelector('.point_pwd').innerHTML = `( 8자리 이상 )`
 		return
 	}
-
+	
 	pwd = true		// 유효성 검사 합격
 	add_pwd_point()	// 녹색 체크표시
 }
@@ -110,27 +120,34 @@ let pwd_Agreement = ''//유효성 합격된 비밀번호확인을 임시저장�
 // 비밀번호와 비밀번호확인 일치하는지 확인
 function pwd_AgreementCheck(){
 	
-	if(pwd = false){
+	if(pwd == false){
 		alert('비밀번호를 확인해주십시오')
 		add_pwd_Check_pointDelete()
 		return
 	}
 	
+	
 	let accountPwd = document.querySelector('.pwd_Input_Text').value
 	let accountPwdCheck = document.querySelector('.pwd_Check_Text').value
 	
+	let pwd_existCheck = 0
+	
 	for(let i=0; i<accountMemberList.length; i++){
-		if(accountPwd == accountPwdCheck){
-			alert('비밀번호가 일치합니다')
-			pwdAgreementCheck = true	//유효성 합격
-			add_pwd_Check_point()		//녹색 체크표시
-			pwd_Agreement = accountPwdCheck
-		}
-		else if(accountPwd != accountPwdCheck){
+		if(accountPwd != accountPwdCheck){
+			pwd_existCheck++
 			add_pwd_Check_pointDelete()
 			alert('비밀번호가 일치하지 않습니다')
+			return
 		}
 	}
+	
+	if(pwd_existCheck == 0){
+		alert('비밀번호가 일치합니다')
+		pwdAgreementCheck = true	//유효성 합격
+		add_pwd_Check_point()		//녹색 체크표시
+		pwd_Agreement = accountPwdCheck
+	}
+
 }
 
 // 유효성 검사가완료된 비밀번호확인이 변경되는 경우
@@ -143,16 +160,6 @@ function pwd_AgreementChangecheck(){
 	pwdAgreementCheck = false	// 유효성 검사 미실시로 인한 불합격
 	add_pwd_Check_pointDelete()	// 녹색 체크표시 삭제
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* 유효성검사가 완료하였을 때 녹색 체크표시 */
@@ -196,4 +203,36 @@ function add_pwd_Check_pointDelete(){
 	let pwdcheckImgBox = document.querySelector('.point_pwd_check')
 	pwdcheckImgBox.innerHTML = ``
 }
+
+
+/* 회원가입 모든 조건 충족여부 확인시 회원가입 진행 */
+/* 회원가입 버튼 클릭 */
+function compliteAccount(){
+
+	if(nameCheck == true && idCheck == true && pwd == true && pwdAgreementCheck == true){
+		alert('회원가입이 완료되었습니다')
+		accountMember.Mname = document.querySelector('.name_Input_Text').value
+		accountMember.Mid = document.querySelector('.id_Input_Text').value
+		accountMember.Mpwd = document.querySelector('.pwd_Check_Text').value
+	
+		accountMemberList.push(accountMember)
+		
+		localStorage.setItem('accountMemberList', JSON.stringify(accountMemberList))
+	}
+	
+	/* main페이지 a태그로 이동 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 

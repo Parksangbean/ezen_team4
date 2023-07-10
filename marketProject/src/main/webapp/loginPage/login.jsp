@@ -25,8 +25,8 @@
 			<div class="manager_PWD_box"><input class="manager_PWD" type="password" placeholder="비밀번호"></div>
 			
 			<div class="manager_button_box">
-				<button>로그인</button>
-				<button>회원가입</button>
+				<button onclick="login()">로그인</button>
+				<button onclick="account()">회원가입</button>
 			</div>
 		</div><!-- 로그인 박스 -->
 	
