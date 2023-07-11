@@ -27,11 +27,12 @@
 		</div>
 		<div class="contentBox">
 			<div class="content">
-				<div>가게1</div>
-				<div>가게2</div>
-				<div>가게3</div>
-				<div>가게3</div>
-				<div>가게3</div>
+				
+				<!--
+				
+					게시물이 출력되는 구역
+					 
+				 -->
 			</div>
 			<button onclick="regist()"class="sum" type="button">가게 등록</button>
 		</div>
