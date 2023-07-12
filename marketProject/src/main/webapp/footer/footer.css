@@ -4,33 +4,73 @@
 	padding: 0px;
 	margin: 0px;
 }
+a{
+	text-decoration: none;
+	color: #868B94;
+}
+a:hover{
+	text-decoration: none;
+}
 
 #main_topField{
 	width: 1200px;
 	height: 200px;
 	margin: 0 auto;
-	border: 1px solid red;
 	display: flex;
 	justify-content: space-between;
+	padding-top: 50px;
+	color: #868B94;
 }
 .left{
 	width: 790px;
 	height: 190px;
-	border: 1px solid blue;
+	padding-left: 20px;
 }
-.right{
-	width: 390px;
-	height: 190px;
-	border: 1px solid blue;
+.right_Img{
+	width: 290px;
+	height: 160px;
+	padding-top: 30px;
 }
 
 .leftField_top{
 	width: 780px;
 	height: 100px;
-	border: 1px solid black;
 }
 .leftField_bottom{
 	width: 780px;
 	height: 25px;
-	border: 1px solid black;
+	margin-top: 30px;
+}
+.leftField_bottom span{
+	font-weight: bold;
+	margin-right: 30px;
+	font-size: 16px;
+}
+
+
+/* leftField_top */
+.leftField_top h4, p{
+	display: inline;
+}
+.leftField_top h4{
+	font-size: 16px;
+}
+.right_Img img{
+	width: 280px;
+	height: 46px;
+}
+
+
+/* main_bottomField */
+#main_bottomField{
+	width: 1178px;
+	height: 30px;
+	margin: 0 auto;
+	padding-left: 20px;
+	color: #868B94;
+}
+#main_bottomField span{
+	font-weight: bold;
+	margin-right: 30px;
+	font-size: 16px;
 }

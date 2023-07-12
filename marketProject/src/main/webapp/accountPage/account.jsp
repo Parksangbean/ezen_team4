@@ -56,7 +56,7 @@
 
 
 
-
+	<%@include file="../footer/footer.jsp" %>
 	<script src="./account.js" type="text/javascript"></script>
 </body>
 </html>

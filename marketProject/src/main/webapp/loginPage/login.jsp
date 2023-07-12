@@ -40,7 +40,7 @@
 	</div><!-- 전체 레이아웃 end -->
 
 
-
+	<%@include file="../footer/footer.jsp" %>
 	<script src="./login.js" type="text/javascript"></script>
 
 </body>
