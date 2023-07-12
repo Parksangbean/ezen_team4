@@ -9,8 +9,10 @@ let target = 1
 function selectProduct(_num)
 {
 	let area = document.querySelector('.updateArea')
+	
 	if(_num == 1) //동네가게
 	{
+		document.querySelector('.viewbtn').innerHTML = `가게목록`
 		target=2
 		area.innerHTML =`<div class="Sinfoarea">
 				<h3>동네가게 리스트에 추가</h3>
@@ -28,6 +30,7 @@ function selectProduct(_num)
 	}
 	else // 알바
 	{
+		document.querySelector('.viewbtn').innerHTML = `알바목록`
 		target = 3
 		area.innerHTML = `<div class="Pinfoarea"> 
 			<h3>알바 리스트에 추가</h3>
@@ -56,6 +59,7 @@ function selectProduct(_num)
 }
 function cancleList()
 {
+	document.querySelector('.viewbtn').innerHTML = `홈페이지`
 	document.querySelector('.updateArea').innerHTML = `` 
 }
 function ViewList() // 1 홈 2 동네가게 3 알바리스트
@@ -78,6 +82,7 @@ function partSubmitBtn(_num)
 	
 	if(_num == 1) //
 	{
+		
 		if(document.querySelector('.inputtitle').value == "" ||
 		document.querySelector('.inputaddress').value == "" ||
 		document.querySelector('.inputcontent').value == "" ||
@@ -113,6 +118,7 @@ function partSubmitBtn(_num)
 	}
 	else //알바리스트에 추가
 	{
+		
 		let productlist = []
 		let select_drop = document.querySelector('.dropunit')
 		
