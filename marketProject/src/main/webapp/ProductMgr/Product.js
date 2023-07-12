@@ -118,8 +118,8 @@ function partSubmitBtn(_num)
 		
 		if(document.querySelector('.inputtitle').value == "" ||
 		document.querySelector('.inputaddress').value == "" ||
-		document.querySelector('.inputcontent').value == "" ||
-		document.querySelector('.inputtype').value == "")
+		 
+		document.querySelector('.inputpay').value == "")
 		{
 			alert('필수사항 미기입')
 			return

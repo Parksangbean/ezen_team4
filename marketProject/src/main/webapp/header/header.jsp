@@ -13,10 +13,10 @@
             <a href="#"><img class="head_img" src="../MainPage/img/당근마켓로고.png"></a> <!-- 헤더 당근마켓 로고 이미지 -->
             <ul> <!-- 헤더 카테고리 시작 -->
                <li><a href="#"><span class="head_name">중고거래</span></a></li>
-                <li><a href="">동네가게</a></li> 
-               <li><a href="#">알바</a></li>
+                <li><a href="../StorePage/StorePage.jsp">동네가게</a></li> 
+               <li><a href="../PartTime/PartTime.jsp">알바</a></li>
                <li><a href="#">중고차직거래</a></li>
-               <li><a href="#">Join</a></li>         
+               <li><a href="../ProductMgr/Product.jsp">제품추가</a></li>         
             </ul> <!-- 헤더 카테고리 끝 -->
                <form class="head_search"> <!-- 물품검색하는 인풋 박스 -->                  
                      <input  type="search" placeholder="물품이나 동네를 검색하세요.">
