@@ -24,6 +24,8 @@ li{ list-style: none;}
 }
 .category_menu button{
 	margin: 10px;
+	background-color: white;
+	border-radius: 15px;
 }
 .contentBox{
 	display: flex;
@@ -34,18 +36,21 @@ li{ list-style: none;}
 }
 .content{
 	display:flex;
-	justify-content:space-between;
+	flex-wrap:wrap;
 	width:500px; height:800px;
 	border: 1px solid red;
 }
-.review{
+.reviewBox{
 	border: 1px solid red;
 	width: 1200px;
 	height: 200px;
 }
-.footer{
-	width:100%;
-	display: flex;
+
+
+.test1{
+	width: 50%;
 	border: 1px solid red;
-	align-items: center;
+}
+.sum{
+	width: 100px; height: 50px;
 }

@@ -1,6 +1,5 @@
 console.log('js실행')
-let categoryList=[ '전체' , '식당' , '카페' , '용달/이사' , '뷰티/미용' , '헬스/필라테스']
-let Contents = []
+let Contents = ['123','123','123','123','123']
 AllContentView();
 function AllContentView(){
 	console.log('입력')
@@ -10,8 +9,7 @@ function AllContentView(){
 	console.log(content)
 	let html=``;
 	for( let i = 0; i<Contents.length; i++){
-		
-		html +=`<div>${Contents[i]}</div> `
+		html +=`<div class="test1">${Contents[i]}</div> `
 	}
 	content.innerHTML = html
 }
