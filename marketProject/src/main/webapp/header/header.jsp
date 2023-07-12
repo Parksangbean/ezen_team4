@@ -22,6 +22,6 @@
                      <input  type="search" placeholder="물품이나 동네를 검색하세요.">
                      <button type="submit" class="chat_button">채팅하기</button>   
                </form><!-- 물품검색하는 인풋 박스 끝-->
-         </div>   <!-- 헤더 구역 end -->
+         </div>   <!-- 헤더 구역 end -->					
 </body>
 </html>
