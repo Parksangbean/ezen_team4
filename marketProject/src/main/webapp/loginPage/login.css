@@ -39,7 +39,8 @@
 	height: 400px;
 	margin: 0 auto;
 	border: 1px solid red;
-	background-color: #FE8A3F;
+	background-color: #FE8A3F; 
+	margin-top: 40px;
 }
 .manager_ID_box{
 	width: 700px;
