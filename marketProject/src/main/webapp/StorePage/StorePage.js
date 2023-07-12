@@ -22,7 +22,7 @@ function AllContentView(){
 	for( let i = 0; i<productlist.length; i++){
 		html +=`<div class="test1">
 					<div><img class="nimg"src="./img/nonimg.jpg"></div>
-					<div><span>${productlist[i].title}</span><span>${productlist[i].address}</span>
+					<div><span class="title">가게이름:${productlist[i].title}|</span><span class="address">주소:${productlist[i].address}</span>
 						<div>${productlist[i].content}</div>
 						<span>${productlist[i].review},${productlist[i].custom}${productlist[i].productType}</span>
 					</div>
