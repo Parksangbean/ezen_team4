@@ -9,48 +9,111 @@ li{ list-style: none;}
 }
 .top_logo{
 	width:100%; height: 250px;
-	border : 1px solid red;
-	background-image: url("./img/toplogo.png");
-	background-repeat: no-repeat;
-	background-position: 50%; 
-	background-size: contain;
 	background-color: #F7F1EB;
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+}
+.top_logo h3{
+	font-size: 30px;
+    font-weight: bold;
+}
+.top_logo img{
+	width: 400px;
 }
 .category_menu{
-	width:1200px;
-	border: 1px solid red;
-	display :flex;
+	width:1200px; height:50px;
+	margin-bottom: 30px;
+}
+.categoryList{
+	display: flex;
 	justify-content: center;
+	margin: 10px 10px;
 }
 .category_menu button{
-	margin: 10px;
+	width:100px; height:38px;
 	background-color: white;
 	border-radius: 15px;
+	border: 1px solid #e8e8e8;
 }
 .contentBox{
 	display: flex;
 	justify-content: center;
-	border: 1px solid red;
 	width: 1200px;
-	height: 800px;
 }
 .content{
 	display:flex;
+	justify-content:space-between;
 	flex-wrap:wrap;
-	width:500px; height:800px;
-	border: 1px solid red;
+	width:720px;
 }
 .reviewBox{
 	border: 1px solid red;
 	width: 1200px;
 	height: 200px;
+	margin: 50px 50px;
 }
 
+.text3 h3{
+	font-size: 30px;
+}
 
 .test1{
-	width: 50%;
-	border: 1px solid red;
+	display:flex;
+	margin-right:40px;
+	width : 300px; height :120px;
+	border-bottom: 1px solid #e8e8e8;
+	padding-top: 10px;
 }
 .sum{
 	width: 100px; height: 50px;
 }
+.nimg{
+	width: 70px;
+}
+.bottombanner{
+	display: flex;
+	background-color: #FEF6EA;
+	width: 760px;
+    padding: 1.5rem 1.375rem 1.5rem 2rem;
+    align-items: center;
+    flex-direction: row;
+}
+.btText{
+	padding-left:15px;
+	width: 65%;
+	font-size: 16px;
+}
+.profile button{
+	background-color: #FF6F0F;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	width: 180px; height: 40px;
+	line-height: 1.32;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+.text2 h3{
+	padding: 20px 30px;
+	font-size: 30px;
+}
+.reviewBox{
+	display: flex;
+	justify-content: center;
+}
+.review{
+	display:flex;
+	justify-content:space-between;
+	flex-wrap:wrap;
+	overflow-y: scroll;
+	width:720px;
+}
+.test2{
+	width : 340px; height :120px;
+	border: 1px solid #e8e8e8;
+	padding-top: 10px;
+	
+}
+
+
