@@ -1,7 +1,9 @@
 
 
   let listItem = [] // 알바 리스트
+  /*
   //테스트 데이터
+  
   const unitlist = ['시급','일급','월급','연봉']
   const addresslist = ['옹달샘 123-2호 302호','산기슭 132-1 202호','중앙동 2번째 놀이터']
   const titlelist = ['벌레잡아줄사람 구함','게임 보상 상자 대신 열어줄사람','피시방 이벤트 대신 가줘요','삼겹살 대신 구워줄사람']
@@ -16,7 +18,20 @@ for(let i = 0 ; i<rand;i++)
 		 pay:Math.random()*900000+10
 		 
 	 }
- )
+ )*/
+ console.log('?')
+ getList()
+ function getList()
+ {
+	 if (localStorage.getItem('PartTimeList') != null)
+		{
+		
+			for(let item of JSON.parse(localStorage.getItem('PartTimeList')))
+			{
+				listItem.push(item)
+			}			
+		}
+ }
  let page = 0 //최대 페이지 저장
  const pageRange = 10 //한 페이지에 보여줄 리스트 갯수 상수 선언
  loadList() // 알바 리스트 불러오기

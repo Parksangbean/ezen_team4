@@ -8,22 +8,37 @@
 .mgrWrap
 {
 	width: 1200px;
-	height: 1200px;
+	height: 800px;
 	margin: 0 auto;
-	text-align: center;
+	
+}
+.toptitle
+{
+	padding-top: 110px;
+}
+.mgrtop
+{
+	width: 400px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 70px;
 }
 .selbtn
 {
-	margin-top: 300px;
-	width: 150px;
-	height: 100px;
+	margin: 0 auto;
+	width: 120px;
+	height: 80px;
 	text-align: center;
 	margin-right: 30px;
+	border: none;
+	background-color: #FD9A62;
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+	
 }
-.inputWrap
-{
-	margin-top: 200px;
-}
+
 .dropunit
 {
 	width: 80px;
@@ -35,19 +50,39 @@
 	display: flex;
 	justify-content: center;
 }
-.infoarea
+.btnarea
+{
+	margin: 0 auto;
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 50px;
+}
+.Pinfoarea
 {
 	display: flex;
 	margin: 0 auto;
 	flex-direction: column;
-	width: 1200px;
+	width: 600px;
 	height: 200px;
 	align-items:center;
 	justify-content: space-evenly;
 	
 	
 }
-.infoarea input
+.Sinfoarea
+{
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;
+	width: 600px;
+	height: 400px;
+	align-items:center;
+	justify-content: space-evenly;
+	
+	
+}
+.Sinfoarea input , .Pinfoarea input
 {
 	width: 320px;
 	height: 40px;

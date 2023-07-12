@@ -13,7 +13,7 @@
 				<a href="#"><img class="head_img" src="../MainPage/img/당근마켓로고.png"></a> <!-- 헤더 당근마켓 로고 이미지 -->
 				<ul> <!-- 헤더 카테고리 시작 -->
 					<li><a href="#"><span class="head_name">중고거래</span></a></li>
-					 <li><a href="">동네가게</a></li> 
+					 <li><a href="#">동네가게</a></li> 
 					<li><a href="#">알바</a></li>
 					<li><a href="#">중고차직거래</a></li>
 					<li><a href="#">Join</a></li>			
