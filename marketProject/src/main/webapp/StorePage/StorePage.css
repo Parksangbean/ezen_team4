@@ -12,7 +12,7 @@ li{ list-style: none;}
 	border : 1px solid red;
 	background-image: url("./img/toplogo.png");
 	background-repeat: no-repeat;
-	background-position: 50%; 
+	background-position: 60%; 
 	background-size: contain;
 	background-color: #F7F1EB;
 }
@@ -32,12 +32,12 @@ li{ list-style: none;}
 	justify-content: center;
 	border: 1px solid red;
 	width: 1200px;
-	height: 800px;
 }
 .content{
 	display:flex;
+	justify-content:space-between;
 	flex-wrap:wrap;
-	width:500px; height:800px;
+	width:720px;
 	border: 1px solid red;
 }
 .reviewBox{
@@ -46,11 +46,41 @@ li{ list-style: none;}
 	height: 200px;
 }
 
-
 .test1{
-	width: 50%;
-	border: 1px solid red;
+	display:flex;
+	margin-right:40px;
+	width : 300px; height :120px;
+	border-bottom: 1px solid #e8e8e8;
+	padding-top: 10px;
 }
 .sum{
 	width: 100px; height: 50px;
 }
+.nimg{
+	width: 70px;
+}
+.bottombanner{
+	display: flex;
+	background-color: #FEF6EA;
+	width: 760px;
+    padding: 1.5rem 1.375rem 1.5rem 2rem;
+    align-items: center;
+    flex-direction: row;
+}
+.btText{
+	padding-left:15px;
+	width: 65%;
+	font-size: 16px;
+}
+.profile button{
+	background-color: #FF6F0F;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	width: 180px; height: 40px;
+	line-height: 1.32;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+

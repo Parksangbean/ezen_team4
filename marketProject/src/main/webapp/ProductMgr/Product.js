@@ -96,7 +96,7 @@ function partSubmitBtn(_num)
 			}			
 		}
 		productlist.push({
-			//imgpath 
+			imgPath:"./img/nonimg.jpg",
 			title: document.querySelector('.inputtitle').value,
 			address: document.querySelector('.inputaddress').value,
 			content: document.querySelector('.inputcontent').value,
