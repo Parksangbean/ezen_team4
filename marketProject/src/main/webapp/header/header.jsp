@@ -8,7 +8,7 @@
 <link href="../header/header.css" rel="stylesheet">
 </head>
 <body>
-			
+	
 			<div id="head_menu">	<!-- 헤더 구역 -->
 				<a href="#"><img class="head_img" src="../MainPage/img/당근마켓로고.png"></a> <!-- 헤더 당근마켓 로고 이미지 -->
 				<ul> <!-- 헤더 카테고리 시작 -->

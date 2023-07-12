@@ -10,6 +10,7 @@
 
 </head>
 <body>
+	<%@include file="../header/header.jsp" %>
 
 	<div id="wrap"><!-- 전체 레이아웃 -->
 	
