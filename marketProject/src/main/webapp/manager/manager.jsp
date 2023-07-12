@@ -21,5 +21,8 @@
 
 	
 	<script src="./manager.js" type="text/javascript"></script>
+
+	<%@include file="../header/header.jsp" %>
+
 </body>
 </html>
