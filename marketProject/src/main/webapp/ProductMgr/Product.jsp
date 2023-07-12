@@ -15,7 +15,7 @@
 		<div class="mgrtop">
 			<button class="selbtn" onclick="selectProduct(1)">동네가게</button>
 			<button class="selbtn" onclick="selectProduct(2)">알바</button>
-			<button class="selbtn" onclick="ViewList()">목록보기</button>
+			<button class="selbtn viewbtn" onclick="ViewList()">홈페이지</button>
 		</div>
 		<div class="updateArea">
 			
