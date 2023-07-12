@@ -19,7 +19,7 @@ let inputPWD = document.querySelector('.manager_PWD').value
 	for(let i=0; i<no.length; i++){
 		if(no[i].Mid==inputID && no[i].Mpwd==inputPWD){
 			alert('로그인 되었습니다')
-			/*메인페이지 a태그 이동*/
+			 location.href = '../MainPage/MainPage.jsp' //경로이동
 			return
 		}
 	}
@@ -27,8 +27,4 @@ let inputPWD = document.querySelector('.manager_PWD').value
 	alert('아이디 또는 비밀번호를 확인해주세요')
 	inputID = ''
 	inputPWD = ''
-}
-
-function account(){
-	/*회원가입페이지 a태그 이동*/
 }

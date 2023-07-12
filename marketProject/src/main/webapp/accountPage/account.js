@@ -213,6 +213,7 @@ function compliteAccount(){
 
 	if(nameCheck == true && idCheck == true && pwd == true && pwdAgreementCheck == true){
 		alert('회원가입이 완료되었습니다')
+		 location.href = '../loginPage/login.jsp' //경로이동
 		accountMember.Mname = document.querySelector('.name_Input_Text').value
 		accountMember.Mid = document.querySelector('.id_Input_Text').value
 		accountMember.Mpwd = document.querySelector('.pwd_Check_Text').value

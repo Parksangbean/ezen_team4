@@ -8,8 +8,8 @@
 <link href="../MainPage/MainPage.css" rel="stylesheet">
 </head>
 <body>
+		<%@include file="../header/header.jsp" %>
 		<div id="wrap">		<!--전체구역  -->
-			<%@include file="../header/header.jsp" %>
 			<div class="main_top"> <!-- 본뭇 첫번째 시작 -->
 				<h1 class="main_title" >당신 근처의<br/> 당근마켓</h1>	
 				<p>
@@ -191,9 +191,8 @@
             
             </div>
         </div>
-		
-	</div>		<!--전체구역 end  -->
 
+	</div>		<!--전체구역 end  -->
 		<script src="../MainPage/MainPage.js" type="text/javascript"></script>
 </body>
 </html>

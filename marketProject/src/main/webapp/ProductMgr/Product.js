@@ -102,7 +102,7 @@ function partSubmitBtn(_num)
 		}
 		productlist.push({
 			imgPath:"./img/nonimg.jpg",
-			title: document.querySelector('.inputtitle').value,
+			title: document.querySelector('.input title').value,
 			address: document.querySelector('.inputaddress').value,
 			content: document.querySelector('.inputcontent').value,
 			review:0 ,

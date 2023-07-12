@@ -10,15 +10,16 @@
     font-style: normal;
 }
 #head_menu {
-	width:1200px;
+	width:100%;
   	display: flex;
-  	justify-content: space-between;
+  	justify-content: space-around;
 	align-items: center;
 	padding: 10px; /* 원하는 여백 크기로 조정 */
 	text-align: center;
 	position: sticky;
 	z-index: 10;
 	top: 0;
+	background-color: white;
 }
 #head_menu img {
   width: 140px;
