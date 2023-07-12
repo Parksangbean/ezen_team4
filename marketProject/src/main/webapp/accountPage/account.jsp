@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+
 	<link href="/marketProject/accountPage/account.css" rel="stylesheet">
 
 </head>
@@ -56,7 +57,7 @@
 
 
 
-
+	<%@include file="../footer/footer.jsp" %>
 	<script src="./account.js" type="text/javascript"></script>
 </body>
 </html>

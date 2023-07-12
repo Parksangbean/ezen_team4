@@ -1,4 +1,4 @@
-let accountMemberList = [{Mname : "manager",Mid : "manager",Mpwd : "manager"}]
+let accountMemberList = []
 // 가입된 객체형태의 회원을 담는 배열(회원리스트)
 // + 관리자 계정생성
 
@@ -10,11 +10,12 @@ let accountMember = {	// 개인별 회원정보 객체
 
 // 쿠키에 올려져있는 값을 accountMemberList에 대입
 // 회원가입 페이지에 들어오면 accountMemberList는 초기화 되어있음
-accountMemberList = JSON.parse(localStorage.getItem('accountMemberList'))
 
-for(let i=0; i<accountMemberList.length; i++){
-	
+accountMemberList = JSON.parse(localStorage.getItem('accountMemberList'))
+if(accountMemberList == null){
+	accountMemberList = []
 }
+console.log(accountMemberList)
 
 let nameCheck = false	// 이름 공백검사	/ true시 사용가능
 let idCheck = false		// 아이디 중복검사,6자리 이상	/ true시 사용가능
@@ -41,6 +42,7 @@ function name_Check(){
 
 let temporaryID = '' //유효성 합격된 아이디를 임시저장하기위한 변수 생성
 // 아이디 중복검사
+
 function id_DuplicationCheck(){
 	
 	let accountID = document.querySelector('.id_Input_Text').value
@@ -222,7 +224,6 @@ function compliteAccount(){
 	
 	/* main페이지 a태그로 이동 */
 }
-
 
 
 
