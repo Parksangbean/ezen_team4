@@ -1,121 +1,37 @@
-/**
- * 
- */
 
 
-
-
- /*listItem.push(
-	 {
-		 imgPath:"./img/nonimg.jpg",
-		 title:"롤 브론즈~챌린저 대리 구함",
-		 address:"현주소 브론즈",
-		 payUnit:"일급",
-		 pay:10000
-		 
-	 }
- )
- 
-  listItem.push(
-	 {
-		 imgPath:"./img/nonimg.jpg",
-		 title:"메이플 대리 사냥해줄분 구함",
-		 address:"250레벨",
-		 payUnit:"일당",
-		 pay:2354345
-		 
-	 }
- )
- 
-  listItem.push(
-	 {
-		 imgPath:"./img/nonimg.jpg",
-		 title:"롤 브론즈~챌린저 대리 구함",
-		 address:"현주소 브론즈",
-		 payUnit:"연봉",
-		 pay:34253245
-		 
-	 }
- )
- 
-  listItem.push(
-	 {
-		 imgPath:"./img/nonimg.jpg",
-		 title:"과제 대신 해줄 사람 구함",
-		 address:"제출 2일전",
-		 payUnit:"월급",
-		 pay:2345345
-		 
-	 }
- )
- 
-  listItem.push(
-	 {
-		 imgPath:"./img/nonimg.jpg",
-		 title:"롤 브론즈~챌린저 대리 구함",
-		 address:"현주소 브론즈",
-		 payUnit:"시급",
-		 pay:1231243
-		 
-	 }
- )
-  listItem.push(
-	 {
-		 imgPath:"./img/nonimg.jpg",
-		 title:"롤 브론즈~챌린저 대리 구함",
-		 address:"현주소 브론즈",
-		 payUnit:"일급",
-		 pay:10000
-		 
-	 }
- )
- 
-  listItem.push(
-	 {
-		 imgPath:"./img/nonimg.jpg",
-		 title:"메이플 대리 사냥해줄분 구함",
-		 address:"250레벨",
-		 payUnit:"일당",
-		 pay:2354345
-		 
-	 }
- )
- 
-  listItem.push(
-	 {
-		 imgPath:"./img/nonimg.jpg",
-		 title:"롤 브론즈~챌린저 대리 구함",
-		 address:"현주소 브론즈",
-		 payUnit:"연봉",
-		 pay:34253245
-		 
-	 }
- )
- 
-  listItem.push(
-	 {
-		 imgPath:"./img/nonimg.jpg",
-		 title:"과제 대신 해줄 사람 구함",
-		 address:"제출 2일전",
-		 payUnit:"월급",
-		 pay:2345345
-		 
-	 }
- )*/
   let listItem = [] // 알바 리스트
+  /*
+  //테스트 데이터
   
+  const unitlist = ['시급','일급','월급','연봉']
+  const addresslist = ['옹달샘 123-2호 302호','산기슭 132-1 202호','중앙동 2번째 놀이터']
+  const titlelist = ['벌레잡아줄사람 구함','게임 보상 상자 대신 열어줄사람','피시방 이벤트 대신 가줘요','삼겹살 대신 구워줄사람']
  let rand = Math.random()*80+10 //리스트 갯수 랜덤 생성
 for(let i = 0 ; i<rand;i++)
   listItem.push(
 	 {
 		 imgPath:"./img/nonimg.jpg",
-		 title:"롤 브론즈~챌린저 대리 구함",
-		 address:"현주소 브론즈",
-		 payUnit:"시급",
+		 title: titlelist[Math.floor(Math.random()*titlelist.length)], //0부터 배열의 길이만큼 수중에 하나를 인덱스로 접근하여 해당 값 저장
+		 address: addresslist[Math.floor(Math.random()*addresslist.length)],
+		 payUnit: unitlist[Math.floor(Math.random()*unitlist.length)],
 		 pay:Math.random()*900000+10
 		 
 	 }
- )
+ )*/
+ console.log('?')
+ getList()
+ function getList()
+ {
+	 if (localStorage.getItem('PartTimeList') != null)
+		{
+		
+			for(let item of JSON.parse(localStorage.getItem('PartTimeList')))
+			{
+				listItem.push(item)
+			}			
+		}
+ }
  let page = 0 //최대 페이지 저장
  const pageRange = 10 //한 페이지에 보여줄 리스트 갯수 상수 선언
  loadList() // 알바 리스트 불러오기
@@ -132,7 +48,7 @@ for(let i = 0 ; i<rand;i++)
 	 let endP = startP+pageRange
 	 //10개씩 나누어 떨어지지 않았을때 남은 개수만큼 출력해주기 위해
 	 //마지막 페이지를 체크하여 예외처리진행
-	 if(endP > listItem.length) 
+	 if(endP > listItem.length) //예) 53페이지가 들어왔을때 반복문 마지막의 범위를 60이 아니라 53으로 바꿔준다
 	 {
 		 endP = listItem.length
 	 }
@@ -224,8 +140,12 @@ function detectBottom() { //스크롤 위치를 계산하여 특정 위치에 �
     let scrollHeight = document.body.scrollHeight //스크롤의 전체 위치를 저장
 	//스크롤의 현재 위치가 0부터 시작~ 
 	// 사용자의 스크롤 전체 높이에서 브라우저의 높이갚을 빼는 방식으로 스크롤의 바닥 체크 
+	
+
     if (pageYOffset >= scrollHeight-innerHeight) {
 		//바닥에 닿았으면 true리턴
+		//컨텐츠를 추가할 예정이라 body태그의 높이를 늘려줌, 최상단 네비게이션의 stiky속성을 위함
+		document.querySelector('body').style.height = scrollHeight+'px';
         return true;
     } else {
 		//그렇지 않다면 false 리턴
@@ -233,7 +153,7 @@ function detectBottom() { //스크롤 위치를 계산하여 특정 위치에 �
     }
 }
 //스크롤에 이벤트리스터 추가 올리거나 내릴때마다 아래 구문을 실행
-addEventListener("scroll", (event) => {
+addEventListener("scroll", () => {
 		//바닥 체크 함수  체크  
 		// 저장된 리스트를 미리 선언된 범위만큼씩 나누고 올림 진행(53개를 예를 들면 6페이지가 나와야 함)
 		// 최대 페이지 범위 체크

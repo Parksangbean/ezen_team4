@@ -1,0 +1,92 @@
+@charset "UTF-8";
+.toptitle
+{
+	margin:  0 auto;
+	width: 300px;
+}
+
+.mgrWrap
+{
+	width: 1200px;
+	height: 800px;
+	margin: 0 auto;
+	
+}
+.toptitle
+{
+	padding-top: 110px;
+}
+.mgrtop
+{
+	width: 400px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 70px;
+}
+.selbtn
+{
+	margin: 0 auto;
+	width: 120px;
+	height: 80px;
+	text-align: center;
+	margin-right: 30px;
+	border: none;
+	background-color: #FD9A62;
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+	
+}
+
+.dropunit
+{
+	width: 80px;
+	height: 40px;
+	margin-right: 20px;
+}
+.payarea
+{
+	display: flex;
+	justify-content: center;
+}
+.btnarea
+{
+	margin: 0 auto;
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 50px;
+}
+.Pinfoarea
+{
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;
+	width: 600px;
+	height: 200px;
+	align-items:center;
+	justify-content: space-evenly;
+	
+	
+}
+.Sinfoarea
+{
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;
+	width: 600px;
+	height: 400px;
+	align-items:center;
+	justify-content: space-evenly;
+	
+	
+}
+.Sinfoarea input , .Pinfoarea input
+{
+	width: 320px;
+	height: 40px;
+	
+	font-size: 12px;
+	
+}

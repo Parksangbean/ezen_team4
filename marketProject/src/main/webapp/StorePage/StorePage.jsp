@@ -18,44 +18,31 @@
 		</div>
 		<div><h3>다양한 동네가게를 볼 수 있어요</h3></div>
 		<div class="category_menu">
-			<button onclick="AllContent()">전체</button>
-			<button onclick="()">식당</button>
-			<button onclick="Cafe()">카페</button>
-			<button onclick="Move()">용달/이사</button>
-			<button onclick="()">뷰티/미용</button>
-			<button onclick="health()">헬스/필라테스/요가</button>
+			<button class="AllContent" onclick="AllContentView()">전체</button>
+			<button class="restaurant" onclick="restaurantView()">식당</button>
+			<button class="Cafe" onclick="CafeView()">카페</button>
+			<button class="Move" onclick="MoveView()">용달/이사</button>
+			<button class="beauty" onclick="beautyView()">뷰티/미용</button>
+			<button class="health" onclick="healthView()">헬스/필라테스/요가</button>
 		</div>
-		<div class="content">
-			<button>가게 등록</button>
+		<div class="contentBox">
+			<div class="content">
+				
+				<!--
+				
+					게시물이 출력되는 구역
+					 
+				 -->
+			</div>
+			<button onclick="regist()"class="sum" type="button">가게 등록</button>
 		</div>
 		<div><h3>동네 이웃이 남긴 후기를 찾아보세요</h3></div>
-		<div class="review">
-			<button>후기 등록</button>
+		<div class="reviewBox">
+			<div class="review"></div>
+			<button class="review_btn" type="button">후기 등록</button>
 		</div> 
 	</div> <!-- main end -->
 	<div class="footer">
-		<div>
-			<ul>
-				<li>중고거래</li>
-				<li>동네가게</li>
-				<li>당근알바</li>
-				<li>부동산 직거래</li>
-				<li>중고차 직거래</li>
-			</ul>
-		</div>
-		<div>
-			<ul>
-				<li>당근비지니스</li>
-				<li>채팅하기</li>
-			</ul>
-		</div>
-		<div>
-			<ul>
-				<li>자주 묻는 질문</li>
-				<li>회사 소개</li>
-				<li>인재 채용</li>
-			</ul>
-		</div>
 	</div>
 	<script src="StorePage.js" type="text/javascript"></script>
 </body>

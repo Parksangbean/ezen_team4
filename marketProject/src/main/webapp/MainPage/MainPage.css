@@ -56,24 +56,6 @@ a{ color: black; text-decoration: none; } /* a태그의 색상 , 밑줄 제거	 
 .head_name{
 	color: #FF6A00;
 }
-.main_top{
-	width: 180%;
-	background-color: #FBF7F2;
-	height: 650px;
-	position: relative;	
-}
-.top_img {
-    position: absolute;
-    right: 470px;
-    bottom: 0px;
-    width: 812px;
-    height: 646px;
-    background-color: #FBF7F2;
-    background-repeat: no-repeat;
-    background-size: 804px 685px;
-    padding-top: 7px;
-    margin-left: 30px; 
-}
  .head_search {
 	display: flex;
     justify-content: center;
@@ -90,6 +72,25 @@ a{ color: black; text-decoration: none; } /* a태그의 색상 , 밑줄 제거	 
     outline: none;
     background-color: #eeeeee;
 }
+.main_top{
+	width: 180%;
+	background-color: #FBF7F2;
+	height: 650px;
+	position: relative;	
+}
+
+.top_img {
+    position: absolute;
+    right: 470px;
+    bottom: 0px;
+    width: 812px;
+    height: 646px;
+    background-color: #FBF7F2;
+    background-repeat: no-repeat;
+    background-size: 804px 685px;
+    padding-top: 7px;
+    margin-left: 30px; 
+}
 .main_title{
 	padding: 180px 0px 0px 409px;
 	font-size: 50px;
@@ -99,7 +100,7 @@ a{ color: black; text-decoration: none; } /* a태그의 색상 , 밑줄 제거	 
 }
  .second_text{
  	width: 160%;
- 	height: 650px;
+ 	height: 750px;
  	background: white;
  }
  .second_img{
@@ -152,10 +153,12 @@ a{ color: black; text-decoration: none; } /* a태그의 색상 , 밑줄 제거	 
 .text{
 	padding-top: 200px;
 	padding-left: 300px;
+
 }
 .text p{
 	padding-top: 25px;
 	font-size: 13px;
+	width: 100%;
 }
 
 .text_1{
@@ -164,4 +167,129 @@ a{ color: black; text-decoration: none; } /* a태그의 색상 , 밑줄 제거	 
 }
 .text_1p{
 	padding-top: 15px;
+	font-size: 13px
+}
+.icon-stroy2{
+	background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-2-208bb88cad31e335b40bc8ac5b7684dcf8a36d77ac50770a497a9c967a3bfc4f.svg);
+	width: 56px; height: 56px;
+	background-size: 56px 56px;
+	margin-left: 220px;
+	margin-top: -150px;
+}
+.text_write{
+	padding-top: 20px;
+	padding-left: 211px;
+}
+.text_write_p{
+	padding-top: 15px;
+	font-size: 13px
+}
+.icon-stroy3{
+	background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-3-0a14d64c6101a7271655747d8401b9f71506578f8a4c0640608074e977bbc7c0.svg);
+	width: 56px; height: 56px;
+	background-size: 56px 56px;
+	margin-left: 420px;
+	margin-top: -150px;
+	
+}
+.text_write1{
+	padding-top: 20px;
+	padding-left: 420px;
+}
+.text_write_1p{
+	padding-top: 15px;
+	font-size: 13px
+}
+.third_img{
+	margin-top: -450px;
+	padding-left: 600px;
+}
+.fourth_text{
+	width: 180%;
+	background-color: #FBF7F2;
+	height: 650px;
+	position: relative;
+}
+.fourth_img{
+	position: absolute;
+    left: 50px;
+    bottom: 0px;
+    width: 645px;
+    height: 646px;
+    background-color: #FBF7F2;
+    background-repeat: no-repeat;
+    background-size: 804px 685px;
+    padding-top: 7px;
+    margin-left: 30px;
+}
+
+.fourth_title{
+	padding: 180px 0px 0px 409px;
+	font-size: 50px;
+}
+.fourth_text h1{
+	padding:  200px 0px 0px 900px;
+}
+.fourth_text p{
+	padding:  30px 0px 0px 900px;
+}
+ 
+.gray_button{
+	border-radius: 6px;
+	font-size: medium;
+	font-weight: 600;
+	border: none;
+	display: inline-block;
+	padding: 1.0rem 1.5rem;
+	background-color: #F1F3F5;
+	margin-left: 5px;
+	transition: background-color 0.3s ease-in-out;
+	cursor: pointer;
+}
+.gray_button:hover{
+	background-color: #dcddde;
+}
+.five_text{
+	width: 180%;
+	background-color: #F8F9FA;
+	height: 1000px;
+	position: relative;
+}
+
+.top_title{
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin-top: 100px;
+	text-align: center;
+	margin-bottom: 100px;
+	padding-top: 50px;
+}
+ 
+ 
+.item{
+	width: 200px;
+	height: 410px;
+	flex-grow: 0;
+  flex-basis: auto;
+	margin: auto;
+}
+ 
+.item_row{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 50px;
+}
+ .five_text h1{
+ 	padding: 50px 0px 0px 600px;
+ }
+.five_text img{
+	width: 230px;
+	height: 230px;
+	border-radius: 12px;
+}
+.Photo{
+	padding: 30px 0px 0px 110px
+}
+.five_text h2{
+	font-size: 16px
 }
