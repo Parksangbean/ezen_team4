@@ -48,13 +48,13 @@ li{ list-style: none;}
 	width:720px;
 }
 .reviewBox{
-	border: 1px solid red;
 	width: 1200px;
 	height: 200px;
 	margin: 50px 50px;
 }
 
 .text3 h3{
+	margin-top:30px;
 	font-size: 30px;
 }
 
