@@ -122,7 +122,7 @@
                     <div class="item">
                         <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/e71e173af178d80d5c134dbcbe9dd032dd76410552d83e7e7770a6f1594ff18f.jpg?q=82&s=300x300&t=crop" style="border-radius: 12px; width:200px">
                         <h2 class="item_name">이사가느라 가전 팔아요~! 골라...</h2>
-                        <h2 class="item_cost">99원</h2>
+                        <h2 class="item_cost">9900원</h2>
                         <h1 class="item_place">광주 북구 신용동</h1>
                         <div class="like_chating">
                             <span class="like">관심 28</span>
