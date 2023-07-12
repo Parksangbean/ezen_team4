@@ -68,26 +68,23 @@
 			          <button class="gray_button" style="margin-top: 30px;">당근마켓 동네가게 찾기</button>     
 	         	 	</p>		      	 	
 				</div>	
-			</div>				<!-- 본뭇 네번째 end -->	
-			<div class="five_text">				<!-- 본뭇 다섯번째 시작 -->
+			</div>	<!-- 본뭇 네번째 end -->	
+			<div class="five_text">	<!-- 본뭇 다섯번째 시작 -->
+				 <h1>중고거래 인기매물</h1>
+                <div class=imgitem>
+                	<img class="Photo"src="../MainPage/img/인기매물1.webp">
+                	<div class="title"></div>
+                	<h2>LG제습기</h2>
+                	<div>50.000원</div>
+                	<div>제주 제주시 한림읍</div>
+                	<div><span>관심 6 </span> 
+                	∙
+                	<span>채팅 44</span>
+                </div>
+              </div>
+				
 			
-			
-			
-			
-			
-			
-			
-			</div>				<!-- 본뭇 다섯번째 end -->
-			
-			
-			
-			
-			<div class="lower_category">				<!-- 하단 카테고리 시작  -->
-			
-			
-			
-			
-			</div>				<!-- 하단 카테고리 end  -->
+			</div>	<!-- 하단 카테고리 end  -->
 			
 		</div>		<!--전체구역 end  -->
 		<script src="../MainPage/MainPage.js" type="text/javascript"></script>

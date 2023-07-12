@@ -25,7 +25,7 @@
   display: flex;
   gap: 10px; /* 메뉴 간격을 원하는 크기로 조정 */
   list-style: none;
-  margin-right: 62px;
+  margin-right: 38px;
 }
 
 #head_menu ul li {
@@ -55,4 +55,17 @@
     border: none;
     outline: none;
     background-color: #eeeeee;
+}
+.chat_button{
+	border: 0.5px solid #b8bcc3;
+	border-radius: 0.3rem;
+	font-size: 1.0rem;
+	font-weight: 600;
+	margin: 0 auto;
+	width: 80px;
+	height: 40px;
+	display: flex;
+	justify-content: center;/*수평 가운데 정렬*/
+	align-items: center; /*수직 가운데 정렬*/
+	background-color: white;
 }
