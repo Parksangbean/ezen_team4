@@ -106,10 +106,10 @@ function partSubmitBtn(_num)
 		})
 		localStorage.setItem('StoreList',JSON.stringify(productlist))
 		//입력 후 초기화
-		document.querySelector('.inputtitle').value == "" 
-		document.querySelector('.inputaddress').value == "" 
-		document.querySelector('.inputcontent').value == "" 
-		document.querySelector('.inputtype').value == ""
+		document.querySelector('.inputtitle').value = "" 
+		document.querySelector('.inputaddress').value = "" 
+		document.querySelector('.inputcontent').value = "" 
+		document.querySelector('.inputtype').value = ""
 	}
 	else //알바리스트에 추가
 	{
@@ -143,5 +143,9 @@ function partSubmitBtn(_num)
 			pay:Number(document.querySelector('.inputpay').value)
 		})
 		localStorage.setItem('PartTimeList',JSON.stringify(productlist))
+		
+		document.querySelector('.inputtitle').value = ""
+		document.querySelector('.inputaddress').value = ""
+		document.querySelector('.inputpay').value = ""
 	}
 }
