@@ -3,7 +3,6 @@
 *{
 	padding: 0px;
 	margin: 0px;
-	font-family: 'MBC1961GulimM';
 }
 @font-face {
     font-family: 'MBC1961GulimM';
@@ -41,6 +40,7 @@
 	border: 1px solid red;
 	background-color: #FE8A3F; 
 	margin-top: 40px;
+	font-family: 'MBC1961GulimM';
 }
 .manager_ID_box{
 	width: 700px;

@@ -1,17 +1,16 @@
 
 // 배열 생성하여 쿠키값 초기화 
 let no = JSON.parse(localStorage.getItem('accountMemberList'))
-console.log(no)
 
 let inputMainID = document.querySelector('.manager_ID')
 let inputMainPWD = document.querySelector('.manager_PWD')
 
-// 관리자 아이디, 비밀번호가 같으면 관리자 계정 로그인
-if(no[0].Mid==inputMainID && no[0].Mpwd==inputMainPWD){
-	
+
+if(no == null){
+	no = []
 }
 
-
+console.log(no)
 function login(){
 	
 let inputID = document.querySelector('.manager_ID').value

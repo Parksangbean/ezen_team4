@@ -191,8 +191,9 @@
             
             </div>
         </div>
-			
+		
 	</div>		<!--전체구역 end  -->
+
 		<script src="../MainPage/MainPage.js" type="text/javascript"></script>
 </body>
 </html>

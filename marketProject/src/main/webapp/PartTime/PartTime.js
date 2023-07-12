@@ -55,6 +55,7 @@ for(let i = 0 ; i<rand;i++)
 	 for(let i =startP ; i<endP;i++)
 	 {
 		 let _item = listItem[i]
+		 console.log(_item.pay.toLocaleString())
 		 getArea.innerHTML += `
 		 <a href="#"><div class="partTimeItem partItem${i}">
 			<div>

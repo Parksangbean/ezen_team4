@@ -35,7 +35,7 @@
 		</div>
 		
 	</div>
-
+	<%@include file="../footer/footer.jsp" %>
 	<script type="text/javascript" src="./PartTime.js"></script>
 </body>
 </html>

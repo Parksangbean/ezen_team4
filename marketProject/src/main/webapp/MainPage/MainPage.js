@@ -1,6 +1,3 @@
-/*
-  id 키값 : userID 쿠키 이용
- */
 let timgList=['timg1.png','timg2.png','timg3.png','timg4.png','timg5.png']
 console.log('js 실행')
 let viewtimg =0;

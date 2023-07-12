@@ -3,13 +3,14 @@
 *{
 	padding: 0px;
 	margin: 0px;
-	font-family: 'MBC1961GulimM';
+
 }
 /* 로고 */
 #wrap{
 	width: 1200px;
 	height: 1300px;
 	margin: 0 auto;
+	font-family: 'MBC1961GulimM';
 }
 @font-face {
     font-family: 'MBC1961GulimM';

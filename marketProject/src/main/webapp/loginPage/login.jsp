@@ -28,7 +28,7 @@
 			
 			<div class="manager_button_box">
 				<button onclick="login()">로그인</button>
-				<button onclick="account()">회원가입</button>
+				<a href="../accountPage/account.jsp"><button onclick="account()">회원가입</button></a>
 			</div>
 		</div><!-- 로그인 박스 -->
 	
